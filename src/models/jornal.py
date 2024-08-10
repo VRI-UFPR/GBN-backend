@@ -13,6 +13,6 @@ class Jornal(SQLModel, table=True):
     estado_publicacao: str 
     periodo_publicacao: str
     ano_scan: int
-    # exemplares: List["Exemplar"] = Relationship(back_populates="jornal")
+    exemplares: List["Exemplar"] = Relationship(back_populates="jornal")
     created_at: datetime.datetime
     updated_at: datetime.datetime
