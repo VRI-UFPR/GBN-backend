@@ -16,8 +16,8 @@ class Exemplar(SQLModel, table=True):
     metadados: str
     jornal_id: uuid.UUID = Field(default=None, foreign_key="jornal.id")
 
-    jornais: "Jornal" = Relationship(back_populates="exemplar")
-    paginas: List["Pagina"] = Relationship(back_populates="exemplar")
+    jornais: "Jornal" = Relationship(back_populates="exemplares")
+    paginas: List["Pagina"] = Relationship(back_populates="exemplares")
 
     created_at: datetime.datetime
     updated_at: datetime.datetime

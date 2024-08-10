@@ -15,9 +15,9 @@ class Pagina(SQLModel, table=True):
     image_path: str
     exemplar_id: uuid.UUID = Field(default=None, foreign_key="exemplar.id")
 
-    exemplar: "Exemplar" = Relationship(back_populates="pagina")
-    textos_ocr: list["TextoOcr"] = Relationship(back_populates="pagina")
-    textos_correcao_manual: list["TextoCorrecaoManual"] = Relationship(back_populates="pagina")
+    exemplares: "Exemplar" = Relationship(back_populates="paginas")
+    textos_ocr: list["TextoOcr"] = Relationship(back_populates="paginas")
+    textos_correcao_manual: list["TextoCorrecaoManual"] = Relationship(back_populates="paginas")
 
     created_at: datetime.datetime
     updated_at: datetime.datetime
