@@ -8,11 +8,14 @@ if TYPE_CHECKING:
 
 class Jornal(SQLModel, table=True):
     id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True)
+
     titulo_jornal: str = Field(index=True)
     cidade_publicacao: str 
     estado_publicacao: str 
     periodo_publicacao: str
     ano_scan: int
+    
     exemplares: List["Exemplar"] = Relationship(back_populates="jornal")
+
     created_at: datetime.datetime
     updated_at: datetime.datetime
