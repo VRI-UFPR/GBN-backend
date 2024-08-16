@@ -1,7 +1,6 @@
 import datetime
-import uuid
 from typing import TYPE_CHECKING, Optional, List
-from sqlmodel import Field, Relationship, Session, SQLModel, create_engine, select
+from sqlmodel import Field, SQLModel
 
 if TYPE_CHECKING:
     from models.pagina import Pagina
@@ -15,9 +14,6 @@ class Exemplar(SQLModel, table=True):
     idioma_predominante: str
     metadados: str
     jornal_id: int = Field(default=None, foreign_key="jornal.id")
-
-    # jornais: "Jornal" = Relationship(back_populates="exemplares")
-    # paginas: List["Pagina"] = Relationship(back_populates="exemplares")
 
     created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
     updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)

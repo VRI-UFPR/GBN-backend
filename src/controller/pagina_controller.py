@@ -1,20 +1,20 @@
 from fastapi import APIRouter, status
 from typing import Optional, List
 from src.repository.pagina_repository import PaginaRepository
-from src.schemes.pagina import PaginaInDatabase
+from src.schemes.pagina import PaginaOut
 
 router = APIRouter()
 pagina_repository = PaginaRepository()
 
-@router.get("/", response_model=List[Optional[PaginaInDatabase]], status_code=status.HTTP_200_OK)
-async def get_pagina() -> PaginaInDatabase:
+@router.get("/", response_model=List[Optional[PaginaOut]], status_code=status.HTTP_200_OK)
+async def get_pagina() -> PaginaOut:
     return pagina_repository.get_all()
 
-@router.get("/{id}", response_model=Optional[PaginaInDatabase], status_code=status.HTTP_200_OK)
-async def get_pagina(id: int) -> PaginaInDatabase:
+@router.get("/{id}", response_model=Optional[PaginaOut], status_code=status.HTTP_200_OK)
+async def get_pagina(id: int) -> PaginaOut:
     return pagina_repository.get_by_id(id)
 
-@router.post("/", response_model=Optional[PaginaInDatabase], status_code=status.HTTP_201_CREATED)
-async def create_pagina(pagina: PaginaInDatabase) -> PaginaInDatabase:
+@router.post("/", response_model=Optional[PaginaOut], status_code=status.HTTP_201_CREATED)
+async def create_pagina(pagina: PaginaOut) -> PaginaOut:
     pagina_repository.create(pagina)
     return pagina

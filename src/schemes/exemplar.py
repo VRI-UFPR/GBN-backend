@@ -4,10 +4,10 @@ from typing import Optional
 from pydantic import BaseModel
 
 class BaseExemplar(BaseModel):
-    num_paginas: int # nome do Jornal i.e "Der Pionier"
-    ano_publicacao: int # ano de publicação do jornal
-    idioma_predominante: str # caminho da pagina do jornal no servidor
-    metadados: str # periodo de publicação do jornal
+    num_paginas: int
+    ano_publicacao: int
+    idioma_predominante: str
+    metadados: str
 
 class ExemplarCreate(BaseExemplar):
     pass
@@ -17,3 +17,13 @@ class ExemplarInDatabase(BaseExemplar):
     jornal_id: int
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()
+
+class ExemplarOut(BaseExemplar):
+    id: int
+    jornal_id: int
+
+    num_paginas: int
+    ano_publicacao: int 
+    idioma_predominante: str
+    metadados: str
+

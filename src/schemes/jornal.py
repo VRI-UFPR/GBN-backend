@@ -17,6 +17,14 @@ class JornalCreate(BaseJornal):
 
 class JornalInDatabase(BaseJornal):
     id: Optional[int] | None  = None
-    # exemplares: Optional[List[ExemplarInDatabase]] | None = None
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()
+
+class JornalOut(BaseJornal):
+    id: int
+    
+    titulo_jornal: str
+    cidade_publicacao: str
+    estado_publicacao: str
+    periodo_publicacao: str
+    ano_scan: int

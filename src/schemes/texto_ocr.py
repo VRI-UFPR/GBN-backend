@@ -11,7 +11,14 @@ class TextoCreate(BaseTextoOcr):
     pass
 
 class TextoOcrInDatabase(BaseTextoOcr):
-    id: Optional[uuid.UUID] | None  = None
+    id: Optional[int] | None  = None
     pagina_id: int
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()
+
+class TextoOcrOut(BaseTextoOcr):
+    id: int
+    pagina_id: int
+    
+    texto_ocr: str
+    modelo_ocr: str
