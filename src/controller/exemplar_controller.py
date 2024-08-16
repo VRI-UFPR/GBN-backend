@@ -18,3 +18,8 @@ async def get_exemplar(id: int) -> ExemplarOut:
 async def create_exemplar(exemplar: ExemplarOut) -> ExemplarOut:
     exemplar_repository.create(exemplar)
     return exemplar
+
+@router.put("/", response_model=Optional[ExemplarOut], status_code=status.HTTP_200_OK)
+async def update_exemplar(exemplar: ExemplarOut) -> ExemplarOut:
+    exemplar_repository.update(exemplar)
+    return exemplar

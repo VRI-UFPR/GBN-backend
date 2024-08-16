@@ -18,3 +18,8 @@ async def get_pagina(id: int) -> PaginaOut:
 async def create_pagina(pagina: PaginaOut) -> PaginaOut:
     pagina_repository.create(pagina)
     return pagina
+
+@router.put("/", response_model=Optional[PaginaOut], status_code=status.HTTP_200_OK)
+async def update_pagina(pagina: PaginaOut) -> PaginaOut:
+    pagina_repository.update(pagina)
+    return pagina

@@ -18,3 +18,8 @@ async def get_texto_correcao_manual(id: int) -> TextoCorrecaoManualOut:
 async def create_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoManualOut) -> TextoCorrecaoManualOut:
     texto_correcao_manual_repository.create(texto_correcao_manual)
     return texto_correcao_manual
+
+@router.put("/", response_model=Optional[TextoCorrecaoManualOut], status_code=status.HTTP_200_OK)
+async def update_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoManualOut) -> TextoCorrecaoManualOut:
+    texto_correcao_manual_repository.update(texto_correcao_manual)
+    return texto_correcao_manual

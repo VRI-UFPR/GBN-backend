@@ -18,3 +18,8 @@ async def get_texto_ocr(id: int) -> TextoOcrOut:
 async def create_texto_ocr(texto_ocr: TextoOcrOut) -> TextoOcrOut:
     texto_ocr_repository.create(texto_ocr)
     return texto_ocr
+
+@router.put("/", response_model=Optional[TextoOcrOut], status_code=status.HTTP_200_OK)
+async def update_texto_ocr(texto_ocr: TextoOcrOut) -> TextoOcrOut:
+    texto_ocr_repository.update(texto_ocr)
+    return texto_ocr
