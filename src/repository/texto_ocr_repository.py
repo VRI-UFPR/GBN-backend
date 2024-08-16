@@ -14,3 +14,7 @@ class TextoOcrRepository(BaseRepository):
     def create(self, texto_ocr):
         obj = TextoOcr(**texto_ocr.dict())
         return self.base_repository.create(obj)
+    
+    def update(self, texto_ocr):
+        obj = TextoOcr(**texto_ocr.dict())
+        return self.base_repository.update(obj)

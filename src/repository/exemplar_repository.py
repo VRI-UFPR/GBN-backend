@@ -15,3 +15,7 @@ class ExemplarRepository(BaseRepository):
         obj = Exemplar(**exemplar.dict())
         return self.base_repository.create(obj)
     
+    def update(self, exemplar):
+        obj = Exemplar(**exemplar.dict())
+        return self.base_repository.update(obj)
+    

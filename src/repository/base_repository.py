@@ -1,3 +1,4 @@
+import datetime
 from src.database.database import get_engine
 from sqlmodel import Session, select  
 
@@ -29,6 +30,10 @@ class BaseRepository:
     
     def update(self, data):
         with Session(self.engine) as session:
-            session.add(data)
+            old_data = session.get(self.model, data.id)
+            data_model = data.model_dump(exclude_unset=True)
+            old_data.sqlmodel_update(data_model)
+
+            session.add(old_data)
             session.commit()
-            session.refresh(data)
+            session.refresh(old_data)

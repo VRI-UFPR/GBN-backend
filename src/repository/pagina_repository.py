@@ -15,3 +15,7 @@ class PaginaRepository(BaseRepository):
         obj = Pagina(**pagina.dict())
         return self.base_repository.create(obj)
     
+    def update(self, pagina):
+        obj = Pagina(**pagina.dict())
+        return self.base_repository.update(obj)
+    

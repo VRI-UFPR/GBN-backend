@@ -1,5 +1,9 @@
+import logging
 from fastapi import FastAPI
 from .controller import jornal_router, exemplar_router, pagina_router, texto_ocr_router, texto_correcao_manual_router
+
+logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s - %(message)s ')
+
 
 app = FastAPI(title="GBN Backend", version="0.1.0")
 

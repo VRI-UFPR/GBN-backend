@@ -14,3 +14,7 @@ class TextoCorrecaoManualRepository(BaseRepository):
     def create(self, texto_correcao_manual):
         obj = TextoCorrecaoManual(**texto_correcao_manual.dict())
         return self.base_repository.create(obj)
+    
+    def update(self, texto_correcao_manual):
+        obj = TextoCorrecaoManual(**texto_correcao_manual.dict())
+        return self.base_repository.update(obj)
