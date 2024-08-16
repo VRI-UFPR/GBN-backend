@@ -1,12 +1,12 @@
 from fastapi import APIRouter, status
-from typing import Optional
+from typing import Optional, List
 from src.schemes.exemplar import ExemplarInDatabase
 from src.repository.exemplar_repository import ExemplarRepository
 
 router = APIRouter()
 exemplar_repository = ExemplarRepository()
 
-@router.get("/", response_model=Optional[ExemplarInDatabase], status_code=status.HTTP_200_OK)
+@router.get("/", response_model=List[Optional[ExemplarInDatabase]], status_code=status.HTTP_200_OK)
 async def get_exemplar() -> ExemplarInDatabase:
     return exemplar_repository.get_all()
 

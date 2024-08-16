@@ -1,7 +1,9 @@
 import datetime
 import uuid
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
+
+from src.schemes.exemplar import ExemplarInDatabase
 
 class BaseJornal(BaseModel):
     titulo_jornal: str # nome do Jornal i.e "Der Pionier"
@@ -14,6 +16,7 @@ class JornalCreate(BaseJornal):
     pass
 
 class JornalInDatabase(BaseJornal):
-    id: Optional[uuid.UUID] | None  = None
+    id: Optional[int] | None  = None
+    # exemplares: Optional[List[ExemplarInDatabase]] | None = None
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()

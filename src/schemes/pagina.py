@@ -11,7 +11,7 @@ class PaginaCreate(BasePagina):
     pass
 
 class PaginaInDatabase(BasePagina):
-    id: Optional[uuid.UUID] | None  = None
+    id: Optional[int] | None  = None
     exemplar_id: int
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()

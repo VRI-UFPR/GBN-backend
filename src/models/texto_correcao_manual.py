@@ -15,8 +15,8 @@ class TextoCorrecaoManual(SQLModel, table=True):
     pagina_id: uuid.UUID = Field(default=None, foreign_key="pagina.id")
     texto_ocr_id: uuid.UUID = Field(default=None, foreign_key="textoocr.id")
 
-    paginas: "Pagina" = Relationship(back_populates="textos_correcao_manual")
-    textos_ocr: "TextoOcr" = Relationship(back_populates="textos_correcao_manual")
+    # paginas: "Pagina" = Relationship(back_populates="textos_correcao_manual")
+    # textos_ocr: "TextoOcr" = Relationship(back_populates="textos_correcao_manual")
     
     created_at: datetime.datetime
     updated_at: datetime.datetime

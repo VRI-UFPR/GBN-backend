@@ -7,7 +7,7 @@ if TYPE_CHECKING:
     from models.exemplar import Exemplar
 
 class Jornal(SQLModel, table=True):
-    id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True)
+    id: Optional[int] = Field(default=None, primary_key=True)
 
     titulo_jornal: str = Field(index=True)
     cidade_publicacao: str 
@@ -15,7 +15,7 @@ class Jornal(SQLModel, table=True):
     periodo_publicacao: str
     ano_scan: int
     
-    exemplares: List["Exemplar"] = Relationship(back_populates="jornais")
+    # exemplares: Optional[List["Exemplar"]] = Relationship(back_populates="jornais")
 
-    created_at: datetime.datetime
-    updated_at: datetime.datetime
+    created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
+    updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
