@@ -1,11 +1,7 @@
 import datetime
 import uuid
-from typing import TYPE_CHECKING, Optional
-from sqlmodel import Field, Relationship, Session, SQLModel, create_engine, select
-
-if TYPE_CHECKING:
-    from models.pagina import Pagina
-    from models.texto_ocr import TextoOcr
+from typing import Optional
+from sqlmodel import Field, SQLModel
 
 class TextoCorrecaoManual(SQLModel, table=True):
     id: Optional[int] = Field(primary_key=True)

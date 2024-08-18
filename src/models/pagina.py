@@ -9,7 +9,7 @@ class Pagina(SQLModel, table=True):
 
     pagina_index: int
     image_path: str
-    fontes: str
+    fontes: str = Field(default="Fraktur")
     
     created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
     updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)

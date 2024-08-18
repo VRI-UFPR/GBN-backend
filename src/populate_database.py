@@ -44,6 +44,6 @@ def populate_pagina():
                 session.add(pagina)
                 session.commit()
 
-# populate_jornal()
-# populate_exemplar()
+populate_jornal()
+populate_exemplar()
 populate_pagina()

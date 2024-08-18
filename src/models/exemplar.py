@@ -2,10 +2,6 @@ import datetime
 from typing import TYPE_CHECKING, Optional, List
 from sqlmodel import Field, SQLModel
 
-if TYPE_CHECKING:
-    from models.pagina import Pagina
-    from models.jornal import Jornal
-
 class Exemplar(SQLModel, table=True):
     id: Optional[int] = Field(default_factory=None, primary_key=True)
 
