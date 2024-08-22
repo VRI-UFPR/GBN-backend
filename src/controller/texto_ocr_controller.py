@@ -14,6 +14,10 @@ async def get_texto_ocr() -> TextoOcrOut:
 async def get_texto_ocr(id: int) -> TextoOcrOut:
     return texto_ocr_repository.get_by_id(id)
 
+@router.get("/pagina/{pagina_id}", response_model=Optional[TextoOcrOut], status_code=status.HTTP_200_OK)
+async def get_texto_ocr_by_pagina_id(pagina_id: int) -> TextoOcrOut:
+    return texto_ocr_repository.get_by_pagina_id(pagina_id)
+
 @router.post("/", response_model=Optional[TextoOcrOut], status_code=status.HTTP_201_CREATED)
 async def create_texto_ocr(texto_ocr: TextoOcrOut) -> TextoOcrOut:
     texto_ocr_repository.create(texto_ocr)

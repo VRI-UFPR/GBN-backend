@@ -8,6 +8,12 @@ def get_prox_pagina():
         prox_pagina = file.read()
     
     with open(os.getenv("ID_FILE_LOCATION"), 'w') as file:
-        file.write(str(int(prox_pagina) + 1))
+        if int(prox_pagina) < 18:
+            prox_pagina = str(int(prox_pagina) + 1)
+        else:
+            prox_pagina = "0"
+
+        with open(os.getenv("ID_FILE_LOCATION"), 'w') as file:
+            file.write(prox_pagina)
 
     return prox_pagina

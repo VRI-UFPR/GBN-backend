@@ -11,5 +11,5 @@ class TextoOcr(SQLModel, table=True):
 
     pagina_id: int = Field(default=None, foreign_key="pagina.id")
 
-    created_at: datetime.datetime
-    updated_at: datetime.datetime
+    created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
+    updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
