@@ -1,5 +1,4 @@
 import datetime
-import uuid
 from typing import Optional
 from pydantic import BaseModel
 
@@ -10,6 +9,7 @@ class TextoCreate(BaseTextoCorrecaoManual):
     pass
 
 class TextoCorrecaoManualInDatabase(BaseTextoCorrecaoManual):
+    id: Optional[int] | None  = None
     pagina_id: int
     texto_ocr_id: int
     created_at: datetime.datetime = datetime.datetime.now()

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status
 from typing import Optional, List
-from src.schemes.texto_correcao_manual import TextoCorrecaoManualOut, TextoCorrecaoManualInDatabase
+from src.schemes.texto_correcao_manual import TextoCorrecaoManualOut, TextoCorrecaoCreate, TextoCorrecaoManualInDatabase
 from src.repository.texto_correcao_manual_repository import TextoCorrecaoManualRepository
 
 router = APIRouter()
@@ -14,8 +14,8 @@ async def get_texto_correcao_manual() -> TextoCorrecaoManualOut:
 async def get_texto_correcao_manual(id: int) -> TextoCorrecaoManualOut:
     return texto_correcao_manual_repository.get_by_id(id)
 
-@router.post("/", response_model=Optional[TextoCorrecaoManualInDatabase], status_code=status.HTTP_201_CREATED)
-async def create_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoManualInDatabase) -> TextoCorrecaoManualOut:
+@router.post("/", response_model=Optional[TextoCorrecaoCreate], status_code=status.HTTP_201_CREATED)
+async def create_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoCreate) -> TextoCorrecaoManualOut:
     try:
         texto_correcao_manual_repository.create(texto_correcao_manual)
         return texto_correcao_manual
