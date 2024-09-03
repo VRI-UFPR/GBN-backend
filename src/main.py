@@ -3,7 +3,7 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from .controller import jornal_router, exemplar_router, pagina_router, texto_ocr_router, texto_correcao_manual_router, usuario_router, pontuacao_router
+from .controller import jornal_router, exemplar_router, pagina_router, texto_ocr_router, texto_correcao_manual_router, usuario_router, pontuacao_router, alternativa_router, pergunta_router
 
 
 load_dotenv()
@@ -28,4 +28,6 @@ app.include_router(texto_ocr_router, prefix="/texto_ocr", tags=["Texto OCR"])
 app.include_router(texto_correcao_manual_router, prefix="/texto_correcao_manual", tags=["Texto Correcao Manual"])
 app.include_router(usuario_router, prefix="/usuario", tags=["Usuario"])
 app.include_router(pontuacao_router, prefix="/pontuacao", tags=["Pontuacao"])
+app.include_router(alternativa_router, prefix="/alternativa", tags=["Alternativa"])
+app.include_router(pergunta_router, prefix="/pergunta", tags=["Pergunta"])
 
