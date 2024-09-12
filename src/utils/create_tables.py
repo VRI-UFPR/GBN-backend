@@ -1,4 +1,4 @@
-from database.database import get_engine, create_db_and_tables
+from ..database.database import create_db_and_tables
 
 def main():
     try:

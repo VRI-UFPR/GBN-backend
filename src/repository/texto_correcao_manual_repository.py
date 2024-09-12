@@ -11,6 +11,12 @@ class TextoCorrecaoManualRepository(BaseRepository):
     def get_by_id(self, id):
         return self.base_repository.get_by_id(id)
     
+    def get_by_usuario_id(self, usuario_id):
+        return self.base_repository.get_by_column("usuario_id", usuario_id)
+    
+    def get_by_pagina_id(self, pagina_id):
+        return self.base_repository.get_by_column("pagina_id", pagina_id)
+    
     def create(self, texto_correcao_manual):
         obj = TextoCorrecaoManual(**texto_correcao_manual.dict())
         return self.base_repository.create(obj)

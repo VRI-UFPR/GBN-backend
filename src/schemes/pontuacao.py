@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class BasePontuacao(BaseModel):
     pontuacao: int
+    lingua_ocr: str
 
 class PontuacaoCreate(BasePontuacao):
     pass
