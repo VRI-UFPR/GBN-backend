@@ -1,8 +1,8 @@
 from src.repository.base_repository import BaseRepository
 from src.models.usuario import Usuario 
 
-class BaseRepository:
-    def __init__(self, model):
+class UsuarioRepository:
+    def __init__(self):
         self.base_repository = BaseRepository(Usuario)
     
     def get_all(self):
