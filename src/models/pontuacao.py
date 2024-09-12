@@ -7,6 +7,7 @@ class Pontuacao(SQLModel, table=True):
 
     usuario_id: int = Field(foreign_key="usuario.id")
     pontuacao: int
+    lingua_ocr: str
 
     created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
     updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
