@@ -1,15 +1,15 @@
 import os
 from dotenv import load_dotenv
 from sqlmodel import SQLModel, create_engine
-from models.jornal import Jornal
-from models.exemplar import Exemplar
-from models.pagina import Pagina
-from models.texto_ocr import TextoOcr
-from models.texto_correcao_manual import TextoCorrecaoManual
-from models.usuario import Usuario
-from models.pontuacao import Pontuacao
-from models.alternativa import Alternativa
-from models.pergunta import Pergunta
+from src.models.jornal import Jornal
+from src.models.exemplar import Exemplar
+from src.models.pagina import Pagina
+from src.models.texto_ocr import TextoOcr
+from src.models.texto_correcao_manual import TextoCorrecaoManual
+from src.models.usuario import Usuario
+from src.models.pontuacao import Pontuacao
+from src.models.alternativa import Alternativa
+from src.models.pergunta import Pergunta
 
 
 load_dotenv()

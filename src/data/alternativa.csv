@@ -1,0 +1,17 @@
+id, pergunta_id, pagina_id, alternativa, alternativa_correta
+0, 0, 0, Fraktur,true
+1, 0, 0, Antiqua,False
+2, 0, 0, Script,False
+3, 0, 0, Italic,False
+4, 1, 1, Fraktur,true
+5, 1, 1, Antiqua,False
+6, 1, 1, Script,False
+7, 1, 1, Italic,False
+8, 2, 2, Fraktur,true
+9, 2, 2, Antiqua,False
+10, 2, 2, Script,False
+11, 2, 2, Italic,False
+12, 3, 3, Fraktur,true
+13, 3, 3, Antiqua,False
+14, 3, 3, Script,False
+15, 3, 3, Italic,False

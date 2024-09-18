@@ -1,7 +1,8 @@
 import datetime
 import uuid
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
+from .alternativa import AlternativaOut
 
 class PerguntaBase(BaseModel):
     pergunta: str
@@ -20,3 +21,6 @@ class PerguntaOut(PerguntaBase):
     pagina_id: int
     
     pergunta: str
+
+class PerguntaComAlternativasOut(PerguntaOut):
+    alternativas: List[AlternativaOut]

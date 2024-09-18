@@ -1,6 +1,5 @@
 from database.database import create_db_and_tables
-from utils.populate_database import populate_jornal, populate_exemplar, populate_pagina
-
+from utils.populate_database import populate_all
 def main():
     # try:
     #     create_db_and_tables()
@@ -9,9 +8,7 @@ def main():
     #     print(e)
 
     try:
-        # populate_jornal()
-        populate_exemplar()
-        populate_pagina()
+        populate_all()
         print("Dados populados")
     except Exception as e:
         print(e)

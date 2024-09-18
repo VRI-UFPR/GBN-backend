@@ -1,6 +1,8 @@
 from models.jornal import Jornal
 from models.exemplar import Exemplar
 from models.pagina import Pagina
+from models.pergunta import Pergunta
+from models.alternativa import Alternativa
 from sqlmodel import Session
 from database.database import get_engine
 import csv
@@ -43,3 +45,36 @@ def populate_pagina():
 
                 session.add(pagina)
                 session.commit()
+
+def populate_perguntas():
+    engine = get_engine()
+    with Session(engine) as session:
+        with open("/home/pedro/src/GBN-backend/src/data/pergunta.csv", 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header row
+            for row in reader:
+                # print(row)                
+                pagina = Pergunta(id=row[0], pagina_id=row[1], pergunta=row[2])
+
+                session.add(pagina)
+                session.commit()
+
+def populate_alternativas():
+    engine = get_engine()
+    with Session(engine) as session:
+        with open("/home/pedro/src/GBN-backend/src/data/alternativa.csv", 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header row
+            for row in reader:
+                # print(row)                
+                pagina = Alternativa(id=row[0], pergunta_id=row[1], pagina_id=row[2], alternativa=row[3], alternativa_correta=bool(row[4]))
+
+                session.add(pagina)
+                session.commit()
+
+def populate_all():
+    populate_jornal()
+    populate_exemplar()
+    populate_pagina()
+    populate_perguntas()
+    populate_alternativas()
