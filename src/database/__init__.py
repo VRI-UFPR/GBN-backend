@@ -1,6 +1,5 @@
-from .database import create_db_and_tables, get_engine
+from .database import get_engine
 
 __all__ = [
-    create_db_and_tables,
     get_engine
 ]

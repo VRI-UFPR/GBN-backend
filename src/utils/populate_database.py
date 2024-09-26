@@ -3,14 +3,31 @@ from models.exemplar import Exemplar
 from models.pagina import Pagina
 from models.pergunta import Pergunta
 from models.alternativa import Alternativa
+from models.pontuacao import Pontuacao
+from models.texto_correcao_manual import TextoCorrecaoManual
+from models.texto_ocr import TextoOcr
+from models.usuario import Usuario
+
 from sqlmodel import Session
 from database.database import get_engine
 import csv
 
+def create_db_and_tables() -> None:
+    engine = get_engine()
+    Jornal.metadata.create_all(engine)
+    Exemplar.metadata.create_all(engine)
+    Pagina.metadata.create_all(engine)
+    TextoOcr.metadata.create_all(engine)
+    TextoCorrecaoManual.metadata.create_all(engine)
+    Usuario.metadata.create_all(engine)
+    Pontuacao.metadata.create_all(engine)
+    Alternativa.metadata.create_all(engine)
+    Pergunta.metadata.create_all(engine)
+
 def populate_jornal():
     engine = get_engine()
     with Session(engine) as session:
-        with open('/home/pedro/src/GBN-backend/src/data/jornal.csv', 'r') as file:
+        with open('data/jornal.csv', 'r') as file:
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
@@ -23,7 +40,7 @@ def populate_jornal():
 def populate_exemplar():
     engine = get_engine()
     with Session(engine) as session:
-        with open('/home/pedro/src/GBN-backend/src/data/exemplar.csv', 'r') as file:
+        with open('data/exemplar.csv', 'r') as file:
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
@@ -36,7 +53,7 @@ def populate_exemplar():
 def populate_pagina():
     engine = get_engine()
     with Session(engine) as session:
-        with open('/home/pedro/src/GBN-backend/src/data/pagina.csv', 'r') as file:
+        with open('data/pagina.csv', 'r') as file:
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
@@ -49,7 +66,7 @@ def populate_pagina():
 def populate_perguntas():
     engine = get_engine()
     with Session(engine) as session:
-        with open("/home/pedro/src/GBN-backend/src/data/pergunta.csv", 'r') as file:
+        with open("data/pergunta.csv", 'r') as file:
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
@@ -62,7 +79,7 @@ def populate_perguntas():
 def populate_alternativas():
     engine = get_engine()
     with Session(engine) as session:
-        with open("/home/pedro/src/GBN-backend/src/data/alternativa.csv", 'r') as file:
+        with open("data/alternativa.csv", 'r') as file:
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:

@@ -1,0 +1,29 @@
+services:
+  gbn-backend:
+    image: gbn-backend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/src
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_URL=postgresql://gbn-backend:gdb-backend@db:5432/gdb-backend
+    depends_on:
+      - db
+    
+
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=gbn-backend
+      - POSTGRES_PASSWORD=gdb-backend
+      - POSTGRES_DB=gdb-backend
+
+volumes:
+  postgres_data:

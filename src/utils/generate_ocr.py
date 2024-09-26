@@ -1,5 +1,4 @@
 from PIL import Image
-import pytesseract
 import csv
 
 # Open the CSV file
