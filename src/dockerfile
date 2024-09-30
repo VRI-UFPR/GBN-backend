@@ -17,6 +17,6 @@ EXPOSE 8080
 # ENV NAME World
 
 # Run app.py when the container launches
-RUN python init_database.py
+# RUN python init_database.py
 
 CMD ["fastapi", "run", "main.py"]

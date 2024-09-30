@@ -89,9 +89,23 @@ def populate_alternativas():
                 session.add(pagina)
                 session.commit()
 
+def populate_texto_ocr():
+    engine= get_engine()
+    with Session(engine) as session:
+        with open("data/texto_ocr.csv", 'r') as file:
+            reader = csv.reader(file, delimiter=';')
+            next(reader)  # Skip header row
+            for row in reader:
+                # print(row)                
+                pagina = TextoOcr(id=row[0], pagina_id=row[1], texto_ocr=row[2], modelo_ocr=row[3])
+
+                session.add(pagina)
+                session.commit()
+
 def populate_all():
     populate_jornal()
     populate_exemplar()
     populate_pagina()
     populate_perguntas()
     populate_alternativas()
+    populate_texto_ocr()
