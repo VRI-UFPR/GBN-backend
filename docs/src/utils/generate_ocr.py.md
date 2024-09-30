@@ -6,12 +6,12 @@ This script is designed to read image file paths from a CSV file, extract text f
 ## Process Flow
 ```mermaid
 graph TD
-    Start("Start") --> ReadCSV("Read CSV file '/home/pedro/src/GBN-backend/src/data/pagina.csv'")
+    Start("Start") --> ReadCSV("Read CSV file '/home/thomas/GBN/GBN-backend/src/data/pagina.csv'")
     ReadCSV --> CheckHeader{"Check if row is header"}
     CheckHeader -- "Yes" --> ReadCSV
     CheckHeader -- "No" --> OpenImage("Open image file")
     OpenImage --> ExtractText("Extract text using pytesseract")
-    ExtractText --> WriteCSV("Write output to CSV file '/home/pedro/src/GBN-backend/src/data/texto_ocr.csv'")
+    ExtractText --> WriteCSV("Write output to CSV file '/home/thomas/GBN/GBN-backend/src/data/texto_ocr.csv'")
     WriteCSV --> End("End")
 ```
 
@@ -26,8 +26,8 @@ graph TD
 ## Dependencies
 ```mermaid
 graph LR
-    generate_ocr_py["generate_ocr.py"] --- |"Reads"| pagina_csv["/home/pedro/src/GBN-backend/src/data/pagina.csv"]
-    generate_ocr_py --- |"Writes"| texto_ocr_csv["/home/pedro/src/GBN-backend/src/data/texto_ocr.csv"]
+    generate_ocr_py["generate_ocr.py"] --- |"Reads"| pagina_csv["/home/thomas/GBN/GBN-backend/src/data/pagina.csv"]
+    generate_ocr_py --- |"Writes"| texto_ocr_csv["/home/thomas/GBN/GBN-backend/src/data/texto_ocr.csv"]
     generate_ocr_py --- |"Uses"| pytesseract["pytesseract"]
     generate_ocr_py --- |"Uses"| PIL["PIL"]
 ```

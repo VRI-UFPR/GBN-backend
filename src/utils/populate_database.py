@@ -31,7 +31,7 @@ def populate_jornal():
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
-                # print(row)                
+                print(row)                
                 jornal = Jornal(id=row[0], titulo_jornal=row[1], cidade_publicacao=row[2], estado_publicacao=row[3], periodo_publicacao=row[4],  ano_scan=row[5])
 
                 session.add(jornal)
