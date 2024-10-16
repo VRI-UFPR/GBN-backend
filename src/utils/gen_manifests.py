@@ -1,20 +1,35 @@
 import json
 import os
+from PIL import Image
 
-server_url = "http://127.0.0.1:8182/iiif/2"
-files_dir = "/media/thomas/c7f0a812-bbd2-4bf9-a7af-ead8d9a44d45/GBN-imgs/teste/"
-output_dir = "./manifests"
+# Global Variables
+server_url = "https://webdokumente.c3sl.ufpr.br:8182/iiif/2"
+files_dir = "/home/olimpiada/cantaloupe/imgs/"
+output_dir = "./manifests/"
 
-
-def generate_iiif_manifest(image_id, image_label, server_url):
+def get_image_size(image_path):
     """
-    Generate a IIIF manifest for a given image.
+    Get the dimensions (width and height) of an image file.
+    
+    Args:
+        image_path (str): The path to the image file.
+    
+    Returns:
+        tuple: Width and height of the image.
+    """
+    with Image.open(image_path) as img:
+        width, height = img.size
+    return width, height
+
+def generate_iiif_manifest(image_id, width, height):
+    """
+    Generate a IIIF manifest for a given image, including its dynamic size.
     
     Args:
         image_id (str): The identifier of the image on the Cantaloupe server.
-        image_label (str): A human-readable label for the image.
-        server_url (str): The base URL of the Cantaloupe server.
-        
+        width (int): The width of the image.
+        height (int): The height of the image.
+    
     Returns:
         dict: A IIIF manifest as a Python dictionary.
     """
@@ -24,7 +39,7 @@ def generate_iiif_manifest(image_id, image_label, server_url):
         "@context": "http://iiif.io/api/presentation/2/context.json",
         "@id": f"{server_url}/{image_id}/manifest.json",
         "@type": "sc:Manifest",
-        "label": image_label,
+        "label": image_id,
         "sequences": [
             {
                 "@type": "sc:Sequence",
@@ -32,9 +47,9 @@ def generate_iiif_manifest(image_id, image_label, server_url):
                     {
                         "@id": f"{server_url}/{image_id}/canvas",
                         "@type": "sc:Canvas",
-                        "label": image_label,
-                        "height": 1000,  # Example height, adjust as needed
-                        "width": 1000,   # Example width, adjust as needed
+                        "label": image_id,
+                        "height": height,
+                        "width": width,
                         "images": [
                             {
                                 "@type": "oa:Annotation",
@@ -68,27 +83,26 @@ def save_manifest_to_file(manifest, output_path):
         manifest (dict): The IIIF manifest to save.
         output_path (str): The path where the manifest file will be saved.
     """
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)  # Ensure the directory exists
     with open(output_path, 'w') as f:
         json.dump(manifest, f, indent=4)
 
 if __name__ == "__main__":
-    # Example usage
-    # image_id = "DerGemeindebote-p01.png"  # Replace with your image ID
-    # image_label = "DerGemeindebote-p01.png"  # Replace with your image label
-    server_url = "http://127.0.0.1:8182/iiif/2"
-
-    files_dir = "/media/thomas/c7f0a812-bbd2-4bf9-a7af-ead8d9a44d45/GBN-imgs/teste/"
-
+    # Iterate through files in the specified directory
     for filename in os.listdir(files_dir):
         file_path = os.path.join(files_dir, filename)
         if os.path.isfile(file_path):
-            print(filename)  # or perform other operations with the file
+            print(f"Processing file: {filename}")
 
-            # Generate the manifest
-            manifest = generate_iiif_manifest(filename, filename, server_url)
+            # Get the dimensions of the image
+            width, height = get_image_size(file_path)
+
+            # Generate the manifest with dynamic image size
+            manifest = generate_iiif_manifest(filename, width, height)
             
             # Save the manifest to a file
             output_path = f"{output_dir}/{filename}_manifest.json"
             save_manifest_to_file(manifest, output_path)
 
             print(f"Manifest saved to {output_path}")
+
