@@ -1,9 +1,8 @@
+import jwt
 from fastapi import FastAPI, Depends, HTTPException, Request
-from starlette.middleware.base import BaseHTTPMiddleware
 from fastapi.security import OAuth2PasswordBearer
 import dotenv
 import os
-import jwt
 
 dotenv.load_dotenv()
 
@@ -14,7 +13,10 @@ async def decode_jwt(request: Request, call_next):
     authorization:  str = request.headers.get("Authorization")
 
     if authorization:
-        token = authorization.split("")[1]    
+        if "Bearer " not in authorization:
+            raise HTTPException(status_code=401, detail="Token inválido (bearer)")
+
+        token = authorization.split("Bearer ")[1]    
         try:
             payload = jwt.decode(token, PRIVATE_KEY, algorithms=["HS256"])
             request.state.username = payload.get("username")

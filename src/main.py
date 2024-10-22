@@ -2,10 +2,10 @@ import logging
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .auth.auth import decode_jwt
+from starlette.middleware.base import BaseHTTPMiddleware
 from dotenv import load_dotenv
+from .auth.auth import decode_jwt
 from .controller import jornal_router, exemplar_router, pagina_router, texto_ocr_router, texto_correcao_manual_router, usuario_router, pontuacao_router, alternativa_router, pergunta_router
-
 
 load_dotenv()
 
