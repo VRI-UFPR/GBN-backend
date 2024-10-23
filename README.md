@@ -1,10 +1,6 @@
 # Getting started
 
-## Passo 1: instalacao PostgreSQL
-
-Siga (esse)[https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart] tutorial que tudo vai dar certo!
-
-## Passo 2: entrar na pasta src
+## Passo 1: entrar na pasta src
 
 `cd src`
 
@@ -15,13 +11,13 @@ Dentro da pasta src, crie um arquivo chamado `.env`. O arquivo deve conter o seg
 ```
 ID_FILE_LOCATION="<PATH_to_utils_id_file>"
 DB_STRING="postgresql://<usuario_banco>:<senha_banco>@localhost:5432/<nome_banco>"
+PUBLIC_KEY_LOC="<localizacao_da_senha_RSA_publica>"
 ```
 
-## Passo 3: Rodar o script de criacao de tabelas e populacao de dados
-
-`python3 utils/init_database.py`
-
-## Passo 4: Iniciar o Backend
-
-`fastapi dev main.py`
-
+## Passo 3: Rodar o banco e o script de criacao de tabelas e populacao de dados
+```
+docker compose up -d --build
+```
+```
+docker compose run gbn-backend python init_database.py
+```
