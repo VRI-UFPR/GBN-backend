@@ -5,13 +5,18 @@ from datetime import datetime, timedelta
 
 dotenv.load_dotenv()
 
-SECRET_KEY = os.getenv("PRIVATE_KEY") 
-ALGORITHM = "HS256"
+# print the actual path of the folder
+
+
+with open("jwtRS256.key") as file:
+    SECRET_KEY = file.read()
+
+ALGORITHM = "RS256"
 
 # Create a payload with username and email
 payload = {
-    "username": "john_doe",
-    "email": "john@example.com",
+    "username": "edsaibert",
+    "email": "eduardasaibert@ufpr.br",
     "exp": datetime.utcnow() + timedelta(minutes=30)  # Token expires in 30 minutes
 }
 
