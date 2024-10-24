@@ -41,7 +41,8 @@ async def decode_jwt(request: Request, call_next):
         raise HTTPException(status_code=401, detail="Token não fornecido")
 
     # Caso a request seja do tipo POST, checará se o user já existe
-    checkIfUserExists(request.state.email, request.state.username)
+    if request.method == "POST" or request.method == "PUT":
+        checkIfUserExists(request.state.email, request.state.username)
 
     response = await call_next(request)
     return response
