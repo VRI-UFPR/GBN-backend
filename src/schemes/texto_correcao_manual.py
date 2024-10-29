@@ -25,5 +25,6 @@ class TextoCorrecaoManualOut(BaseTextoCorrecaoManual):
     texto_ocr_id: int
     pergunta_id: int
 
+    usuario_id: int
     texto_corrigido_manualmente: str
     pergunta_resposta_correta: bool

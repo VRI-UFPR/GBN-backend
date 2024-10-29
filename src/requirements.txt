@@ -3,3 +3,5 @@ sqlmodel==0.0.22
 pyramid==2.0.2 
 uuid==1.30 
 psycopg2-binary==2.9.9 
+numpy==2.1.0
+python-Levenshtein==0.26.0
