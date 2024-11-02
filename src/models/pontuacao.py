@@ -5,7 +5,7 @@ from sqlmodel import Field, SQLModel
 class Pontuacao(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
 
-    usuario_id: int = Field(foreign_key="usuario.id")
+    # usuario_id: int = Field(foreign_key="usuario.id")
     pontuacao: int
     lingua_ocr: str
 
