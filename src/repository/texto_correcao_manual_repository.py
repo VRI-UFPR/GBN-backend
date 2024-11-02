@@ -38,6 +38,7 @@ class TextoCorrecaoManualRepository(BaseRepository):
         print("a pontuacao é:", distancia_usuario)
 
         pontuacao_data = PontuacaoInDatabase(
+            pagina_id=texto_correcao_manual.pagina_id,
             pontuacao=distancia_usuario,
             lingua_ocr="Alemão",
         )

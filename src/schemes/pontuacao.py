@@ -11,6 +11,8 @@ class PontuacaoCreate(BasePontuacao):
 class PontuacaoInDatabase(BasePontuacao):
     # id: int
     # usuario_id: int
+    pagina_id: int
+
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()
 
