@@ -1,9 +1,2 @@
 id, titulo_jornal, cidade_publicacao, estado_publicacao, periodo_publicacao, ano_scan
-0, "Der Gemeindebote", "Novo Hamburgo", "Rio Grande do Sul", "1935-1938", 2018
-1, "Der Jugendfreund", "Porto Alegre", "Rio Grande do Sul", "1911-1917", 2018
-2, "Der Pioner", "Curitiba", "Paraná", "1888-1891", 2018
-3, "Der Sandwirt", "Curitiba", "Paraná", "1934-1940", 2018
-4, "Evangelissch-Lutherisches Kirchenblatt", "Porto Alegre", "Rio Grande do Sul", "1916-1929", 2018
-5, "Kolonie Zeitung", "Blumenau", "Santa Catarina", "1863-1889", 2018
-6, "Gemeindeblat", "São Paulo", "São Paulo", "1938", 2018
-7, "Heimatbote", "São Leopoldo", "Rio Grande do Sul", "1936", 2018
+0, "Olimpiada Lemmbra", "Curitiba", "Paraná", "1832-1948", 2024

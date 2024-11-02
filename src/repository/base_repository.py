@@ -45,3 +45,11 @@ class BaseRepository:
             session.add(old_data)
             session.commit()
             session.refresh(old_data)
+
+    def count(self):
+        with Session(self.engine) as session:
+            statement = select(self.model)
+            results = session.exec(statement)
+            data = results.all()
+
+            return len(data)

@@ -1,9 +1,9 @@
 import json
 import os
-from PIL import Image
+import cv2
 
 # Global Variables
-server_url = "https://webdokumente.c3sl.ufpr.br:8182/iiif/2"
+server_url = "https://webdokumente.c3sl.ufpr.br/cantaloupe/iiif/2"
 files_dir = "/home/olimpiada/cantaloupe/imgs/"
 output_dir = "./manifests/"
 
@@ -17,9 +17,11 @@ def get_image_size(image_path):
     Returns:
         tuple: Width and height of the image.
     """
-    with Image.open(image_path) as img:
-        width, height = img.size
+    
+    img = cv2.imread(image_path)
+    height, width, _ = img.shape
     return width, height
+
 
 def generate_iiif_manifest(image_id, width, height):
     """

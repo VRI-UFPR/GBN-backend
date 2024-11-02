@@ -10,10 +10,9 @@ class TextoCreate(BaseTextoCorrecaoManual):
     pass
 
 class TextoCorrecaoManualInDatabase(BaseTextoCorrecaoManual):
-    id: Optional[int] | None  = None
     pagina_id: int
     texto_ocr_id: int
-    usuario_id: int
+    # usuario_id: int
     pergunta_id: int
     
     created_at: datetime.datetime = datetime.datetime.now()

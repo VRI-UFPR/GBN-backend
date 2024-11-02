@@ -1,17 +1,26 @@
-id, pergunta_id, pagina_id, alternativa, alternativa_correta
-0, 0, 0, Fraktur,true
-1, 0, 0, Antiqua,False
-2, 0, 0, Script,False
-3, 0, 0, Italic,False
-4, 1, 1, Fraktur,true
-5, 1, 1, Antiqua,False
-6, 1, 1, Script,False
-7, 1, 1, Italic,False
-8, 2, 2, Fraktur,true
-9, 2, 2, Antiqua,False
-10, 2, 2, Script,False
-11, 2, 2, Italic,False
-12, 3, 3, Fraktur,true
-13, 3, 3, Antiqua,False
-14, 3, 3, Script,False
-15, 3, 3, Italic,False
+id; pergunta_id; pagina_id; alternativa; alternativa_correta
+0; 0; 0; O texto é contrário ao projeto sobre a “localização do escravo” e o considera um atentado contra o sagrado direito da propriedade.; true
+1; 0; 0; O texto diz ser necessário acabar com a escravidão a qualquer custo mesmo sob sacrifício do sagrado direito à propriedade.; false
+2; 0; 0; O autor do texto condena o anseio de se acabar com a escravidão.; false
+3; 0; 0; O autor do texto defende que a estabilidade da propriedade e da família não são possíveis enquanto houver o direito à propriedade de escravos.; false
+4; 1; 1; No texto, a lavoura é o setor agrícola, que se opõe ao fim da escravidão e quer para si o papel de resistência à reforma do estado servil.; false
+5; 1; 1; O texto assume uma atitude de oposição ao projeto do “ministério de 6 de junho”, que antevê a emancipação progressiva dos escravizados.; false
+6; 1; 1; O texto considera perigoso e indesejável um prazo definido para a abolição completa da escravatura, de uma só vez.; true
+7; 1; 1; No texto, prevê-se que a gratidão das pessoas emancipadas aliviará as tensões causadas pela suspensão simultânea de todo trabalho escravo.; false
+8; 2; 2; Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.; false
+9; 2; 2; O texto trata de um movimento dos presidentes das províncias, que se dirigiram ao Ministro da Agricultura exigindo a libertação de escravos com mais de 65 anos.; false
+10; 2; 2; Todos os escravos com idade entre 60 e 65 anos serão libertados depois de haverem trabalhado por mais três anos para seus senhores.; false
+11; 2; 2;  Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.; true
+12; 2; 2; O jornal, com sua pergunta final, demonstra satisfação e concordância com a medida tomada pelo Ministro da Agricultura.; false
+13; 3; 3; Bento ist der Herr.; false
+14; 3; 3; Anadeto ist der Sklave.; false
+15; 3; 3; Der Polizeidelegat machte den Sklaven frei.; false
+16; 3; 3; Der Herr war graumsam und unmenschlich.; true
+17; 4; 4; Segundo o texto, as diferentes províncias tomam providências semelhantes graças à liderança de São Paulo, exceto o Rio de Janeiro.; false
+18; 4; 4; A população negra participa dos debates e apoia a emancipação, que avança em todas as províncias; false
+19; 4; 4; A população escravizada ignora os debates que se dão, o que favorece a posição dos escravocratas principalmente em São Paulo.; false
+20; 4; 4; O texto afirma que, de modo geral, a tensão entre defensores e opositores da escravidão aumenta a cada momento.; true
+21; 5; 5;O texto compara positivamente o Brasil com outros Estados americanos.; false
+22; 5; 5;O texto afirma que o Brasil é a única monarquia escravocrata nas Américas.; true
+23; 5; 5;O texto considera que o Brasil está em crise, mas observa os bons princípios de justiça e humanidade.; false
+24; 5; 5;O texto afirma que a transição do trabalho escravo para o trabalho livre está tirando o Brasil da crise.; false

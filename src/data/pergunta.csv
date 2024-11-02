@@ -1,5 +1,7 @@
 id, pagina_id, pergunta
-0, 0, Qual a fonte utilizada nessa pagina?
-1, 1, Qual a fonte favorita do programador deste site?
-2, 2, Welche schriftart wurde hier benutzt?
-3, 3, Welche schriftart ist diesem Entwickler liebest?
+0, 0, Assinale a opção correta:
+1, 1, Assinale a opção correta sobre “Os defensores da lavoura”:
+2, 2, Was ist richtig?:
+3, 3, Was ist richtig?:
+4, 4, Assinale a opção correta:
+5, 5, Assinale a opção correta:

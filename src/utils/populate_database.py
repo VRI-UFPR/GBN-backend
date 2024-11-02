@@ -70,7 +70,7 @@ def populate_perguntas():
             reader = csv.reader(file)
             next(reader)  # Skip header row
             for row in reader:
-                # print(row)                
+                print(row)                
                 pagina = Pergunta(id=row[0], pagina_id=row[1], pergunta=row[2])
 
                 session.add(pagina)
@@ -80,7 +80,7 @@ def populate_alternativas():
     engine = get_engine()
     with Session(engine) as session:
         with open("data/alternativa.csv", 'r') as file:
-            reader = csv.reader(file)
+            reader = csv.reader(file, delimiter=';')
             next(reader)  # Skip header row
             for row in reader:
                 # print(row)                

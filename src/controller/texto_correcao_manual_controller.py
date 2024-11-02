@@ -22,8 +22,8 @@ async def get_texto_correcao_manual_by_usuario_id(usuario_id: int) -> TextoCorre
 async def get_texto_correcao_manual_by_pagina_id(pagina_id: int) -> TextoCorrecaoManualOut:
     return texto_correcao_manual_repository.get_by_pagina_id(pagina_id)
 
-@router.post("/", response_model=Optional[TextoCorrecaoManualOut], status_code=status.HTTP_201_CREATED)
-async def create_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoManualOut) -> TextoCorrecaoManualOut:
+@router.post("/", response_model=Optional[TextoCorrecaoManualInDatabase], status_code=status.HTTP_201_CREATED)
+async def create_texto_correcao_manual(texto_correcao_manual: TextoCorrecaoManualInDatabase) -> TextoCorrecaoManualInDatabase:
     try:
         texto_correcao_manual_repository.create(texto_correcao_manual)
         return texto_correcao_manual
