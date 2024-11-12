@@ -7,6 +7,9 @@ class UsuarioRepository:
     
     def get_all(self):
         return self.base_repository.get_all()
+
+    def get_by_email(self, email):
+        return self.base_repository.get_by_email(email)
     
     def get_by_id(self, id):
         return self.base_repository.get_by_id(id)
