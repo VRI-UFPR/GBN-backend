@@ -2,7 +2,6 @@ import datetime
 from pydantic import BaseModel
 
 class BaseUsuario(BaseModel):
-    nome: str
     email: str
 
 class UsuarioCreate(BaseUsuario):
@@ -15,5 +14,4 @@ class UsuarioInDatabase(BaseUsuario):
 
 class UsuarioOut(BaseUsuario):
     id: int
-    nome: str
     email: str

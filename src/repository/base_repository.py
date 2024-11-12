@@ -27,6 +27,17 @@ class BaseRepository:
             data = results.one()
 
             return data
+
+    def get_by_email(self, email):
+        with Session(self.engine) as session:
+            statement = select(self.model).where(self.model.email == email)
+            try:
+                results = session.exec(statement)
+                data = results.one()
+            except:
+                return None
+            
+            return data
         
     def get_by_column(self, column, value):
         with Session(self.engine) as session:
