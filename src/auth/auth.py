@@ -1,5 +1,5 @@
 import jwt 
-from fastapi import FastAPI, Depends, HTTPException, Request, APIRouter
+from fastapi import FastAPI, Depends, HTTPException, Request, APIRouter, status
 
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
@@ -20,7 +20,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 PRIVATE_KEY_LOC = os.getenv("PRIVATE_KEY_LOC") 
 
 # Token expira em 60 minutos
-ACESS_TOKEN_EXPIRE_MINUTES = 60
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 with open(PRIVATE_KEY_LOC) as file: 
     PRIVATE_KEY = file.read()
@@ -33,10 +33,10 @@ def authenticate_user(email: str):
         return False
     return user
 
-# Cria o token de acesso
-def create_acess_token(data: dict, expires_delta: timedelta | None = None):
+# Cria o token de accesso
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
     to_encode = data.copy()
-    if expires.delta:
+    if expires_delta:
         expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(minutes=15)
@@ -52,14 +52,15 @@ async def login(
     user = authenticate_user(form_data.email)
     if not user:
         usuario_repository = UsuarioRepository()
-        usuario_data = Usuario(email=form_data.email)
+        usuario_data = Usuario(email=form_data.email, nome=form_data.email)
         usuario_repository.create(usuario_data)
     
-    acess_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    acess_token = create_access_token(data={"sub": form_data.email}, expires_delta=acess_token_expires)
-    return Token(access_token=acess_token, token_type="bearer")
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(data={"email": form_data.email}, expires_delta=access_token_expires)
+    return Token(access_token=access_token, token_type="bearer")
 
 # Rota para pegar o usuário atual (logado)
+@router.get("/usuario", response_model=Usuario)
 async def get_current_user(token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(
         status_code = status.HTTP_401_UNAUTHORIZED,
@@ -73,16 +74,12 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
             raise credentials_exception
         token_data = TokenData(email=email)
 
-    except InvalidTokenError:
+    except jwt.PyJWTError:
         raise credentials_exception
 
-    user = get_by_email(email=token_data.email)
+    usuario_repository = UsuarioRepository()
+    user = usuario_repository.get_by_email(email=token_data.email)
     if user is None:
         raise credentials_exception
     return user
 
-@router.get("/usuario/eu/", response_model=Usuario)
-async def read_users_me(
-    current_user: Annotated[Usuario, Depends(get_current_user)],
-):
-    return current_user
