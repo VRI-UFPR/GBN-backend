@@ -1,6 +1,7 @@
 import logging
 import os
 from fastapi import FastAPI
+
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from .controller import (
@@ -14,6 +15,7 @@ from .controller import (
     alternativa_router,
     pergunta_router,
 )
+from .auth import auth_router
 
 load_dotenv()
 
@@ -39,4 +41,4 @@ app.include_router(usuario_router, prefix="/api/usuario", tags=["Usuario"])
 app.include_router(pontuacao_router, prefix="/api/pontuacao", tags=["Pontuacao"])
 app.include_router(alternativa_router, prefix="/api/alternativa", tags=["Alternativa"])
 app.include_router(pergunta_router, prefix="/api/pergunta", tags=["Pergunta"])
-
+app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
