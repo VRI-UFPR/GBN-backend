@@ -39,6 +39,14 @@ class BaseRepository:
             
             return data
         
+    def get_by_id_and_column(self, id, column, value):
+        with Session(self.engine) as session:
+            statement = select(self.model).where(self.model.id == id, getattr(self.model, column) == value)
+            results = session.exec(statement)
+            data = results.one()
+
+            return data
+        
     def get_by_column(self, column, value):
         with Session(self.engine) as session:
             statement = select(self.model).where(getattr(self.model, column) == value)
