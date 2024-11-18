@@ -59,6 +59,17 @@ async def login(
     access_token = create_access_token(data={"email": form_data.email}, expires_delta=access_token_expires)
     return Token(access_token=access_token, token_type="bearer")
 
+@router.post("/auth/refresh-token")
+async def refresh_token(
+    form_data: Annotated[TokenData, Depends()], 
+    ) -> Token:
+    
+    new_acess_token_expires = timedelta(minutes=ACESS_TOKEN_EXPIRE_MINUTES)
+    new_access_token = create_access_token(data={"email": form_data.email}, expires_delta=access_token_expires)
+
+    return Token(access_token: new_access_token, token_type: "bearer")
+
+
 # Rota para pegar o usuário atual (logado)
 @router.get("/usuario", response_model=Usuario)
 async def get_current_user(token: str = Depends(oauth2_scheme)):
