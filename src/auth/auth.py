@@ -67,6 +67,13 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         detail = "Credenciais inválidas",
         headers = {"WWW-Authenticate": "Bearer"}
     )
+
+    expired_exception = HTTPException(
+        status_code = 440,
+        detail = "Token expirou",
+        headers = {"WWW-Authenticate": "Bearer"}
+    )
+
     try:
         payload = jwt.decode(token, PRIVATE_KEY, algorithms=["HS256"])
         email = payload.get("email")
@@ -74,6 +81,9 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
             raise credentials_exception
         token_data = TokenData(email=email)
 
+    except jwt.ExpiredSignatureError:
+        raise expired_exception
+    
     except jwt.PyJWTError:
         raise credentials_exception
 
@@ -81,5 +91,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
     user = usuario_repository.get_by_email(email=token_data.email)
     if user is None:
         raise credentials_exception
+    
     return user
 
