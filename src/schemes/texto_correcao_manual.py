@@ -12,7 +12,7 @@ class TextoCreate(BaseTextoCorrecaoManual):
 class TextoCorrecaoManualInDatabase(BaseTextoCorrecaoManual):
     pagina_id: int
     texto_ocr_id: int
-    # usuario_id: int
+    usuario_id: int
     pergunta_id: int
     
     created_at: datetime.datetime = datetime.datetime.now()

@@ -11,6 +11,8 @@ class Pagina(SQLModel, table=True):
     image_path: Optional[str] | None = None
     iiif_path: Optional[str] | None = None
     fontes: str = Field(default="Fraktur")
-    
+    lingua: str = Field(default="alemao")
+
+
     created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)
     updated_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)

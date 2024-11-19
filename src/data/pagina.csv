@@ -1,7 +1,7 @@
-id, pagina_index, image_path, exemplar_id
-0,0,03002_imagem_ptbr,0
-1,0,03003_imagem_ptbr,0
-2,0,03101_imagem_de,0
-3,0,03102_imagem_de,0
-4,0,04138_imagem_de,0
-5,0,04140_imagem_de,0
+id, pagina_index, image_path, exemplar_id, lingua
+0,0,03002_imagem_ptbr,0,portugues
+1,0,03003_imagem_ptbr,0,portugues
+2,0,03101_imagem_de,0,alemao
+3,0,03102_imagem_de,0,alemao
+4,0,04138_imagem_de,0,alemao
+5,0,04140_imagem_de,0,alemao

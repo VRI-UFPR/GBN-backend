@@ -17,13 +17,12 @@ dotenv.load_dotenv()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 # Localizacao da chave privada
-PRIVATE_KEY_LOC = os.getenv("PRIVATE_KEY_LOC") 
+# PRIVATE_KEY_LOC = os.getenv("PRIVATE_KEY_LOC") 
 
 # Token expira em 60 minutos
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
-with open(PRIVATE_KEY_LOC) as file: 
-    PRIVATE_KEY = file.read()
+PRIVATE_KEY = "2b859242a14dfe1bb48379ebdfb746a2a696932280ba34565454841f986a470e"
 
 # Autentica o usuário
 def authenticate_user(email: str):

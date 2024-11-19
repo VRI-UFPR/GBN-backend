@@ -58,7 +58,7 @@ def populate_pagina():
             next(reader)  # Skip header row
             for row in reader:
                 # print(row)                
-                pagina = Pagina(id=row[0], pagina_index=row[1], image_path=row[2], exemplar_id=row[3])
+                pagina = Pagina(id=row[0], pagina_index=row[1], image_path=row[2], exemplar_id=row[3], lingua=row[4])
 
                 session.add(pagina)
                 session.commit()
