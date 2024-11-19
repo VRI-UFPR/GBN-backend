@@ -7,7 +7,8 @@ class TextoOcr(SQLModel, table=True):
     id: Optional[int] = Field(primary_key=True)
     
     texto_ocr: str
-    modelo_ocr: str
+    texto_gabarito: str
+    modelo_ocr: str = Field(default="Humano")
 
     pagina_id: int = Field(default=None, foreign_key="pagina.id")
 

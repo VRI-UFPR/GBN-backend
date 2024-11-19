@@ -1,26 +1,219 @@
-id; pergunta_id; pagina_id; alternativa; alternativa_correta
-0; 0; 0; O texto é contrário ao projeto sobre a “localização do escravo” e o considera um atentado contra o sagrado direito da propriedade.; true
-1; 0; 0; O texto diz ser necessário acabar com a escravidão a qualquer custo mesmo sob sacrifício do sagrado direito à propriedade.; false
-2; 0; 0; O autor do texto condena o anseio de se acabar com a escravidão.; false
-3; 0; 0; O autor do texto defende que a estabilidade da propriedade e da família não são possíveis enquanto houver o direito à propriedade de escravos.; false
-4; 1; 1; No texto, a lavoura é o setor agrícola, que se opõe ao fim da escravidão e quer para si o papel de resistência à reforma do estado servil.; false
-5; 1; 1; O texto assume uma atitude de oposição ao projeto do “ministério de 6 de junho”, que antevê a emancipação progressiva dos escravizados.; false
-6; 1; 1; O texto considera perigoso e indesejável um prazo definido para a abolição completa da escravatura, de uma só vez.; true
-7; 1; 1; No texto, prevê-se que a gratidão das pessoas emancipadas aliviará as tensões causadas pela suspensão simultânea de todo trabalho escravo.; false
-8; 2; 2; Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.; false
-9; 2; 2; O texto trata de um movimento dos presidentes das províncias, que se dirigiram ao Ministro da Agricultura exigindo a libertação de escravos com mais de 65 anos.; false
-10; 2; 2; Todos os escravos com idade entre 60 e 65 anos serão libertados depois de haverem trabalhado por mais três anos para seus senhores.; false
-11; 2; 2;  Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.; true
-12; 2; 2; O jornal, com sua pergunta final, demonstra satisfação e concordância com a medida tomada pelo Ministro da Agricultura.; false
-13; 3; 3; Bento ist der Herr.; false
-14; 3; 3; Anadeto ist der Sklave.; false
-15; 3; 3; Der Polizeidelegat machte den Sklaven frei.; false
-16; 3; 3; Der Herr war graumsam und unmenschlich.; true
-17; 4; 4; Segundo o texto, as diferentes províncias tomam providências semelhantes graças à liderança de São Paulo, exceto o Rio de Janeiro.; false
-18; 4; 4; A população negra participa dos debates e apoia a emancipação, que avança em todas as províncias; false
-19; 4; 4; A população escravizada ignora os debates que se dão, o que favorece a posição dos escravocratas principalmente em São Paulo.; false
-20; 4; 4; O texto afirma que, de modo geral, a tensão entre defensores e opositores da escravidão aumenta a cada momento.; true
-21; 5; 5;O texto compara positivamente o Brasil com outros Estados americanos.; false
-22; 5; 5;O texto afirma que o Brasil é a única monarquia escravocrata nas Américas.; true
-23; 5; 5;O texto considera que o Brasil está em crise, mas observa os bons princípios de justiça e humanidade.; false
-24; 5; 5;O texto afirma que a transição do trabalho escravo para o trabalho livre está tirando o Brasil da crise.; false
+id;pergunta_id;pagina_id;alternativa;alternativa_correta
+0;48;48;7.468;False
+1;48;48;125;True
+2;48;48;1615;False
+3;48;48;47.252;False
+4;13;13;  Garantir que não haja interferência de nações estrangeiras.;False
+5;13;13;  Abolir a escravidão simultaneamente em todas as províncias.;False
+6;13;13;  Promover lutas sangrentas para acelerar o processo.;False
+7;13;13;  Preparar os escravos e libertos com ensino e valores religiosos.;True
+8;52;52;Eloy Franco assassinou uma escrava com um machado.;False
+9;52;52;Eloy Franco, filho de João Franco de Moraes Octavio, vendeu sua fazenda ao próprio pai.;False
+10;52;52;Eloy Franco, segundo as pessoas que escravizava, impôs como castigo a um de seus escravos permanecer por vários dias com os braços atados a uma cruz.;True
+11;52;52;Eloy Franco foi morto por uma mulher escravizada, que negou o crime e foi então punida pelo assassinato, assim como seu marido e filhos.;False
+12;34;34;Samuel auxiliou na captura de outro escravo também chamado Samuel.;False
+13;34;34;Samuel foi cruelmente punido depois de uma tentativa de fuga e por isso recorreu à polícia.;True
+14;34;34;Samuel foi preso pela polícia depois de fugir e torturado por ela na delegacia.;False
+15;34;34;Samuel ao sair da prisão ganhou uma dupla “liberdade”: deixou de ser escravo e deixou de estar preso.;False
+16;38;38;O texto é contrário ao projeto sobre a “localização do escravo” e o considera um atentado contra o sagrado direito da propriedade.;True
+17;38;38;O texto diz ser necessário acabar com a escravidão a qualquer custo, mesmo sob sacrifício do sagrado direito à propriedade.;False
+18;38;38; O autor do texto condena o anseio de se acabar com a escravidão.;False
+19;38;38;O autor do texto defende que a estabilidade da propriedade e da família não são possíveis enquanto houver o direito à propriedade de escravos.;False
+20;20;20;Tem um estilo literário inovador e desconhecido no país.;False
+21;20;20;Porque foi apresentada no teatro mais importante da época, o Theatro Lucinda.;False
+22;20;20;Foi escrita para homenagear o escritor Joaquim Nabuco, conhecido pelo seu trabalho literário.;False
+23;20;20;Tratava de um tema atual e importante para a sociedade brasileira: a questão do elemento servil.;True
+24;4;4;O autor…;False
+25;4;4;Se posiciona como um defensor da escravidão, acreditando que ela não deve acabar.;False
+26;4;4;Acredita que a escravidão deve ser abolida imediatamente, independentemente das consequências econômicas.;False
+27;4;4;Critica a liberdade do voto, considerando-a uma conquista problemática.;False
+28;4;4;Se apresenta como candidato, destaca sua experiência política e sua lealdade ao partido conservador como razões para sua candidatura.;True
+29;51;51;Deutsche sind reich.;False
+30;51;51;Deutsche lieben die Arbeit.;True
+31;51;51;Deutsche reisen oft.;False
+32;51;51;Deutsche sprechen viele Sprachen.;False
+33;6;6;O partido republicano é composto majoritariamente por indivíduos que se opõem à escravidão.;False
+34;6;6;O autor acredita que a escravidão é uma prática aceitável dentro do contexto republicano.;False
+35;6;6;O texto elogia a postura dos jornais republicanos que aceitam anúncios sobre fugas de escravos.;False
+36;6;6;O autor critica a hipocrisia de indivíduos que se dizem republicanos, mas que apoiam a escravidão.;False
+37;32;32;Der Regierung.;False
+38;32;32;Den ehemaligen Sklaven und ihren Nachkommen.;True
+39;32;32;Den Jesuiten.;False
+40;32;32;Den Viehzüchtern.;False
+41;44;44;Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.;False
+42;44;44;O texto trata de um movimento dos presidentes das províncias, que se dirigiram ao Ministro da Agricultura exigindo a libertação de escravos com mais de 65 anos.;False
+43;44;44;Todos os escravos com idade entre 60 e 65 anos serão libertados depois de haverem trabalhado por mais três anos para seus senhores.;False
+44;44;44;Segundo a circular do Ministro da Agricultura dirigida aos presidentes das províncias, todos os escravos com mais de 65 anos devem ser libertados imediatamente.;True
+45;44;44;O jornal, com sua pergunta final, demonstra satisfação e concordância com a medida tomada pelo Ministro da Agricultura.;False
+46;17;17;O texto defende que o trabalho servil é necessário para a ordem econômica e doméstica do país.;False
+47;17;17;O clube republicano se opõe às sessões públicas para discutir a abolição, considerando-as desnecessárias.;False
+48;17;17;O autor acredita que a transformação do trabalho servil para o trabalho livre é difícil e desvantajosa para a produção.;False
+49;17;17;A abolição imediata e incondicional do trabalho servil é vista como uma questão moral e urgente pelo autor.;True
+50;54;54;O texto compara positivamente o Brasil com outros Estados americanos.;False
+51;54;54;O texto afirma que o Brasil é a única monarquia escravocrata nas Américas.;True
+52;54;54;O texto considera que o Brasil está em crise, mas observa os bons princípios de justiça e humanidade.;False
+53;54;54;O texto afirma que a transição do trabalho escravo para o trabalho livre está tirando o Brasil da crise.;False
+54;5;5;O imposto foi criado como parte da lei de orçamento provincial e aplica-se a diferentes situações de transferência de escravos.;True
+55;5;5;A meia sisa de escravo é isenta de qualquer imposto na província.;False
+56;5;5;O imposto sobre o comércio de escravos que entram na província é fixado em 1:000$000.;False
+57;5;5;As penalidades mencionadas na lei são aplicáveis apenas aos senhores de escravos, não aos coletores.;False
+58;19;19;O texto sugere que os imigrantes chegam à Argentina atraídos por promessas exageradas feitas pelos agentes argentinos na Europa.;True
+59;19;19;A imprensa de Buenos Aires está satisfeita com o fato de imigrantes estrangeiros procurarem o consulado brasileiro para solicitar passaportes.;False
+60;19;19;O consul do Brasil em Buenos Aires está seduzindo os imigrantes para deixarem a Argentina e se estabelecerem no Brasil.;False
+61;19;19;A imprensa italiana critica duramente as condições oferecidas pelo Brasil aos imigrantes italianos.;False
+62;24;24;Os paquetes do norte trazem pessoas que são usadas como mão de obra barata e voluntária, mas que são tratadas como mercadoria.;False
+63;24;24;O governo combate e coíbe a venda de escravos, que mesmo assim são tratados como animais.;False
+64;24;24;Hospícios e remunerações para os senhores foram as boas medidas tomadas pelo governo em benefício dos filhos de escravas nascidos após a lei.;False
+65;24;24;O autor critica a falta de ação do governo após a promulgação da lei de liberdade para os nascidos após 28 de setembro de 1871.;True
+66;0;0;No artigo, Angelo Agostini relata acontecimentos de 13 de maio.;False
+67;0;0;"O artigo ""Em honra dos redimidos!"" foi escrito por Julio Verim e publicado na Revista Illustrada.";False
+68;0;0;O artigo divulga acontecimentos relatados por Julio Verim na Revista Illustrada.;True
+69;0;0;O artigo relata conflitos ocorridos por conta de uma nova lei a favor da abolição de escravos.;False
+70;2;2;O artigo defende a imediata abolição da escravatura.;False
+71;2;2;De acordo com o artigo, a abolição da escravatura contribuirá para o desenvolvimento econômico do país.;False
+72;2;2;O artigo defende que a indústria e o comércio do país absorvam a mão-de-obra liberta que surgirá com a abolição da escravatura.;False
+73;2;2;Segundo o artigo, seriam funestas as consequências econômicas para o país, caso este repentinamente perca a força de trabalho de pessoas escravizadas.;True
+74;41;41;O Clube Agrícola da Leopoldina apoiou a aplicação imediata do imposto sobre o tráfico interprovincial de escravos.;False
+75;41;41;O vice-presidente da província de Minas Gerais decidiu aplicar o imposto imediatamente após a sanção do orçamento, em 1º de julho.;False
+76;41;41;O presidente da província tomou medidas para evitar o aumento da população escrava em Minas Gerais, considerando as consequências da nova lei.;True
+77;41;41;As províncias de São Paulo e Rio de Janeiro ainda não se haviam preocupado com proibir o tráfico de escravos.;False
+78;45;45;Bento ist der Herr.;False
+79;45;45;Anadeto ist der Sklave.;False
+80;45;45;Der Polizeidelegat machte den Sklaven frei.;False
+81;45;45;Der Herr war graumsam und unmenschlich.;True
+82;16;16;O orador, Perdigão Malheiros, defende que o norte deve aumentar sua população de escravos para equilibrar o poder político entre as regiões.;False
+83;16;16;O projeto de lei proposto por Perdigão Malheiros tem como objetivo principal eliminar completamente a escravidão no Brasil sem causar qualquer abalo social.;False
+84;16;16;Perdigão Malheiros acredita que o comércio de escravos é prejudicial tanto do ponto de vista humanitário quanto político, criando um desequilíbrio populacional entre o norte e o sul.;True
+85;16;16;O projeto de lei propõe que o comércio de escravos seja permitido apenas dentro de uma mesma província, desde que não envolva compra para revenda.;False
+86;7;7;O passado político do sr. Prado sugere que ele não tem interesse na defesa da abolição.;False
+87;7;7;O texto afirma que o ministério planeja adiar a solução da questão servil para o próximo ano.;False
+88;7;7;O novo ministério, sob a liderança do sr. Prado, está comprometido com a abolição da escravidão.;True
+89;7;7;O sr. João Alfredo e o sr. de Cotegipe têm uma visão divergente sobre a abolição da escravidão.;False
+90;15;15;O primeiro imperador do Brasil, D. Pedro I, ignorou a questão do tráfico de africanos em seus discursos.;False
+91;15;15;A lei de 7 de Novembro de 1831, seguida pelo decreto de 1832, foi suficiente para acabar com o tráfico de escravos no Brasil.;False
+92;15;15;A indústria do tráfico de escravos continuou a operar no Brasil mesmo após leis contra o comércio, devido ao apoio de grandes interesses.;True
+93;15;15;O Sr. Euzebio de Queiroz foi responsável por restaurar o tráfico de escravos ao invés de combatê-lo.;False
+94;21;21;A pena para o comércio ilegal de escravos inclui prisão de 1 a 8 anos e uma multa que pode variar de 100$ a 400$ por cada escravo.;True
+95;21;21;O projeto de lei permite o comércio de escravos dentro das províncias, desde que não haja intenção de revenda.;False
+96;21;21;O parágrafo único especifica que é permitido vender escravos com procuração, desde que não seja em fraude à lei.;False
+97;21;21;O texto foi aprovado em 3 de julho de 1877 pela Assembleia Geral Legislativa, que proibiu completamente o comércio de escravos em todo o Império.;False
+98;37;37;O autor do texto demonstra apoio aos movimentos revolucionários que surgem entre as classes mais baixas da sociedade.;False
+99;37;37;O texto faz referência a clubes secretos e à disseminação de ideias revolucionárias, o que sugere um temor crescente em relação ao avanço de ideias libertárias.;True
+100;37;37;"O termo ""partido negro"" refere-se a um movimento político legalizado que defende a liberdade dos servos urbanos e das fazendas.";False
+101;37;37;O autor defende a insurreição dos servos contra seus possuidores como caminho para o fim da escravatura nas fazendas.;False
+102;31;31;A emancipação gradual é criticada pelo autor por ser ineficaz e incapaz de trazer resultados positivos para o país.;False
+103;31;31;O autor afirma que o governo já fez o suficiente para resolver a questão da emancipação, destacando que a lei de 28 de Setembro solucionou o problema por completo.;False
+104;31;31;O texto argumenta que a lavoura brasileira é autossuficiente e não necessita de ajuda do governo para se livrar da dependência do trabalho escravo.;False
+105;31;31;O texto sugere que a criação de bancos de crédito agrícola ajudaria a impulsionar a lavoura, permitindo que os lavradores tivessem acesso a recursos e pudessem adotar o trabalho livre.;True
+106;40;40;O texto opõe-se a libertação dos escravos supondo riscos e dificuldades que eles enfrentam quando em liberdade.;True
+107;40;40;O texto avalia positivamente o impacto da liberdade na vida dos libertos e coloca em questão os direitos dos proprietários.;False
+108;40;40;O texto saúda e apoia o consenso que há na sociedade quanto à urgência de se abolir a escravidão.;False
+109;40;40;O texto considera que as condições de vida dos escravos são suficientemente boas e por isso os crê em condições de viver livres.;False
+110;42;42;O projeto de F. Bello sugere a manutenção de estradas existentes em benefício de que o transporte da produção agrícola passe por Leopoldina.;False
+111;42;42;A abolição de impostos proposta pelo sr. José Miguel de Siqueira seria prejudicial à economia da província, mas beneficiaria Leopoldina.;False
+112;42;42;O município da Leopoldina, por sua importância e localização, tem recebido atenção e benefícios da província.;True
+113;42;42;Progressistas e liberais, como Ferreira de Resende, são considerados os políticos mais promissores, quando se trata do futuro de Leopoldina.;False
+114;36;36;Der Feitor Martins wurde auf der Fazenda von Hrn. Capitão Antonio Salgado Cesar von Sklaven ermordet, die behaupteten, durch Misshandlungen dazu getrieben worden zu sein.;True
+115;36;36;Der Feitor Martins wurde von einem anderen Fazendeiro ermordet, weil er die Sklaven schlecht behandelte.;False
+116;36;36;Der Mord an Feitor Martins geschah in einer anderen Stadt und nicht auf der Fazenda von Hrn. Capitão Antonio Salgado Cesar.;False
+117;36;36;Die Sklaven flohen nach dem Mord an Feitor Martins und wurden später von der Behörde gefangen genommen.;False
+118;35;35;  10;False
+119;35;35;  50;False
+120;35;35;  100;True
+121;35;35;  200;False
+122;9;9;A caridade para com os ex-escravos.;False
+123;9;9;A instrução do povo.;True
+124;9;9;A preservação da escravidão como legado histórico.;False
+125;9;9;O esquecimento completo do passado.;False
+126;11;11;  Elevar o imposto sobre a exportação de escravos a um valor proibitivo.;False
+127;11;11;  Abolir a escravidão como solução para o problema.;True
+128;11;11;  Aumentar as taxas sobre os compradores de escravos para uso interno.;False
+129;11;11;  Proibir o comércio de escravos entre províncias.;False
+130;8;8;O fundo de emancipação será dividido em duas partes, sendo uma destinada apenas à libertação de escravos mais novos.;False
+131;8;8;O fundo de emancipação tem como objetivo promover a libertação de escravos e compensar os senhores pela perda de mão de obra.;True
+132;8;8;Os serviços dos libertos serão prestados sem qualquer remuneração, apenas em troca de alimentação e vestuário.;False
+133;8;8;Todos os senhores de escravos receberão indenização total pelo valor dos escravos libertados, independentemente da quantidade liberada.;False
+134;46;46;Er wird alle seine Sklaven nach der Kaffee-Ernte verkaufen.;False
+135;46;46;Er wird seine Sklaven nach der Kaffee-Ernte freigeben und einen Lohn festsetzen.;True
+136;46;46;Er plant, die Sklaverei in der Provinz zu verstärken.;False
+137;46;46;Er hat die Versammlung der Fazendeiros besucht.;False
+138;23;23;O jornal Imprensa da província de São Paulo é favorável à introdução dos chineses como alternativa ao trabalho escravo.;False
+139;23;23;O texto do jornal Imprensa defende a introdução de qualquer mão de obra estrangeira, sem distinção de origem.;False
+140;23;23;Atrair trabalhadores europeus, prejudicando os brasileiros, é visto como algo imoral.;False
+141;23;23;A substituição do trabalho escravo pelo trabalho livre é vista como algo vantajoso, mas com desafios a serem enfrentados.;True
+142;18;18;O clube literário criado em Bragança, na província de São Paulo, foi fundado por abolicionistas que já haviam conquistado sua liberdade.;False
+143;18;18;O autor critica o clube literário dos escravos, afirmando que ele promove a desordem e ameaça os interesses públicos e privados.;False
+144;18;18;O autor acredita que a melhor forma de melhorar a condição dos escravos é por meio da educação, preparando-os para ocupar um lugar na sociedade como cidadãos.;True
+145;18;18;O texto defende que a lei de 28 de Setembro é suficiente e não precisa de qualquer revisão ou reforma para melhorar a condição dos escravos.;False
+146;12;12;O Brasil está promovendo a abolição da escravidão de forma eficiente.;False
+147;12;12;O silêncio do trono reflete a condenação da emancipação e seus efeitos negativos.;True
+148;12;12;A posição do Brasil sobre a escravidão é amplamente aceita pelas nações civilizadas.;False
+149;12;12;A escravidão não afeta as relações internacionais do Brasil.;False
+150;47;47;Sorocaba ist eine Stadt ohne Landwirte.;False
+151;47;47;Es ist fast niemand zur Versammlung in Sorocaba erschienen.;False
+152;47;47;Sorocaba ist frei von der Sklaverei.;True
+153;47;47;Sorocaba hat viele Sklaven.;False
+154;3;3;O artigo posiciona-se contrário à reforma implementada pela lei de 13 de maio de 1888.;False
+155;3;3;O artigo posiciona-se contrário ao modo como foi instituída a lei de 13 de maio de 1888.;True
+156;3;3;O artigo afirma que a lei de 13 de maio de 1888 salvaguarda os direitos garantidos no pacto fundamental.;False
+157;3;3;O artigo questiona a defesa dos direitos dos proprietários de lavouras que operam com mão de obra escravizada.;False
+158;53;53;Segundo o texto, as diferentes províncias tomam providências semelhantes graças à liderança de São Paulo, exceto o Rio de Janeiro.;False
+159;53;53;A população negra participa dos debates e apoia a emancipação, que avança em todas as províncias.;False
+160;53;53;A população escravizada ignora os debates que se dão, o que favorece a posição dos escravocratas principalmente em São Paulo.;False
+161;53;53;O texto afirma que, de modo geral, a tensão entre defensores e opositores da escravidão aumenta a cada momento.;True
+162;39;39;No texto, a lavoura é o setor agrícola, que se opõe ao fim da escravidão e quer para si o papel de resistência à reforma do estado servil.;False
+163;39;39;O texto assume uma atitude de oposição ao projeto do “ministério de 6 de junho”, que antevê a emancipação progressiva dos escravizados.;False
+164;39;39;O texto considera perigoso e indesejável um prazo definido para a abolição completa da escravatura, de uma só vez.;True
+165;39;39;No texto, prevê-se que a gratidão das pessoas emancipadas aliviará as tensões causadas pela suspensão simultânea de todo trabalho escravo.;False
+166;28;28;O autor afirma que a abolição da escravidão deve ser vista como uma questão legal, fundamentada em leis nacionais.;True
+167;28;28;O autor defende que a abolição da escravidão dos índios foi garantida pela lei de 1831, que também proibia o tráfico de africanos.;False
+168;28;28;O texto considera que a vitória abolicionista no Ceará é definitiva e não há mais resistência a ser enfrentada.;False
+169;28;28;O autor acredita que o escravo deve receber proteção externa para conseguir sua liberdade.;False
+170;49;49;Er reiste nach Pernambuco.;False
+171;49;49;Er reiste nicht, er blieb in Nazareth.;False
+172;49;49;Er reiste nach Europa.;True
+173;49;49;Er reiste nach Variedades.;False
+174;27;27;O governo está autorizado a pagar passagens e alojamento para imigrantes, desde que sejam solteiros e estejam dispostos a trabalhar em fazendas locais.;False
+175;27;27;O auxílio para cobrir despesas de imigração será concedido após o desembarque dos imigrantes em Santos, desde que estejam estabelecidos na cidade ou em outro local da província.;True
+176;27;27;Para custear as despesas de imigração, será cobrada uma taxa única de 5$000 por ano de todos os escravos da província, sem distinção de localidade.;False
+177;27;27;A verba destinada para imigração inclui auxílio financeiro apenas para imigrantes que pretendem trabalhar nas vilas da província.;False
+178;1;1;O artigo posiciona-se contrário ao estímulo ao movimento imigratório no país.;False
+179;1;1;O artigo faz uma crítica ao governo argentino.;False
+180;1;1;O artigo defende que a imigração pode trazer progresso e prosperidade para o país.;True
+181;1;1;O artigo fala sobre a ameaça que representa a imigração ao progresso e à prosperidade do país.;False
+182;10;10;Apesar das dificuldades políticas e sociais, o partido liberal deve se concentrar na luta pela liberdade religiosa, sem se preocupar com outras reformas políticas.;False
+183;10;10;A abolição da escravatura não é uma prioridade para o partido liberal.;False
+184;10;10;A abolição da escravatura deve ser discutida separadamente das outras reformas, como a liberdade religiosa e a eleição livre.;False
+185;10;10;O autor acredita que a abolição da escravatura é uma reforma que não pode mais ser adiada, pois é vista como essencial para o progresso do país e a consolidação de um governo liberal.;True
+186;33;33;Der Kaiser war schockiert, als er erfuhr, dass Sklaven auf Befehl ihrer Herren ausgepeitscht wurden.;True
+187;33;33;Der Kaiser zeigte großes Interesse an den Bedingungen der Gefangenen und war besonders erfreut über das unterirdische Gefängnis.;False
+188;33;33;Die Gefangenen, die der Kaiser besuchte, waren hauptsächlich politische Gefangene, die gegen die Regierung protestierten.;False
+189;33;33;Der Kaiser unterstützte die Praxis der Auspeitschung von Sklaven, solange sie in den Häusern ihrer Herren durchgeführt wurde.;False
+190;25;25;O autor acredita que a coroa age como representante da nação ao promover a emancipação do elemento servil.;False
+191;25;25;O autor defende que a coroa age apenas como conservadora e, por isso, apoia a emancipação.;False
+192;25;25;O autor demonstra receio de que a coroa, influenciada pela opinião pública favorável à emancipação, possa condenar a posição conservadora, mas ao mesmo tempo afirma que a coroa age como árbitro, não como representante da nação.;True
+193;25;25;O autor acredita que conceder liberdade a todos os indivíduos sem restrições resolveria a contradição da coroa em relação à emancipação.;False
+194;30;30;O texto defende que se trate a luta contra a escravidão como questão regional, daí o destaque que confere à cena abolicionista de São Paulo.;False
+195;30;30;Um velhinho fez doação de dois bilhetes de loteria ao Partido Abolicionista, o que o autor do texto vê como sinal da aspiração da nacionalidade brasileira.;True
+196;30;30;A conferência contou com a participação de diversas figuras proeminentes do movimento abolicionista, como Luiz Gama, que já libertou mais de 1.000 escravos.;False
+197;30;30;Durante a conferência anunciou-se a futura fundação da Sociedade Abolicionista Acadêmica de São Paulo.;False
+198;26;26;Os lavradores da Parahyba do Sul pediram diretamente ao senador barão das Três Barras para interromper o processo de emancipação do ventre.;False
+199;26;26;O autor considera que a emancipação do ventre seria um benefício que não interferiria na disciplina dos escravos e fortaleceria a obediência.;False
+200;26;26;A representação dos lavradores foi enviada ao Dr. Martinho de Campos para ser lida e arquivada nas casas do parlamento.;False
+201;26;26;Os lavradores expressam que a emancipação do ventre é uma ideia perturbadora e prejudicial, pois poderia levar a intervenções indesejadas nas fazendas e gerar desconforto aos senhores de escravos.;True
+202;14;14;O governo imperial deixou claro seu apoio à emancipação dos escravos, destacando isso em seus discursos.;False
+203;14;14;O presidente do conselho expressou sua total confiança e iniciativa para liderar o movimento abolicionista.;False
+204;14;14;O texto destaca a nomeação de uma comissão composta por opositores da emancipação para estudar a questão.;True
+205;14;14;A razão financeira para adiar a emancipação permaneceu um obstáculo, conforme explicado pelo governo.;False
+206;43;43;O texto defende que a luta dos escravos por liberdade é injustificável e deve ser reprimida.;False
+207;43;43;O texto cita o argumento de Joaquim Nabuco, que condena a repressão dos escravos da corte sob a ameaça de seu envio à província.;True
+208;43;43;O texto conclui que os ganhos com o produto do trabalho dos escravos na província justificarão as novas medidas do ministério.;False
+209;43;43;O novo regulamento mencionado no texto é visto como uma tentativa de melhorar as condições de vida dos escravos que vivem na corte.;False
+210;50;50;Weil es keine Menschenrechte gibt.;False
+211;50;50;Weil Gott uns keine Macht über andere Menschen gab.;True
+212;50;50;Weil die weißen Menschen zu stark sind.;False
+213;50;50;Weil Sklaverei die Natur zerstört.;False
+214;22;22;O município de Campos, localizado no Rio de Janeiro, é descrito como um dos menos importantes da província e com pouca riqueza agrícola.;False
+215;22;22;Os lavradores de Campos apresentaram uma proposta para extinguir a escravidão imediatamente, sob compensações aos proprietários de escravos.;False
+216;22;22;O documento apresentado pelos lavradores propõe a extinção da escravidão no prazo de 7 anos, além de criar leis para garantir o trabalho obrigatório de libertos e livres.;True
+217;22;22;A proposta apresentada sugere que tribunais correcionais e colônias agrícolas sejam abolidos para reduzir o surgimento de longos processos judiciários.;False

@@ -10,8 +10,8 @@ class PaginaRepository(BaseRepository):
     def __init__(self):
         self.base_repository = BaseRepository(Pagina)
         self.correcao_repository = TextoCorrecaoManualRepository()
-        self.num_paginas_portugues = self.base_repository.count_by_column("lingua", "portugues")
-        self.num_paginas_alemao = self.base_repository.count_by_column("lingua", "alemao")
+        self.num_paginas_portugues = self.base_repository.count_by_column("lingua", "ptbr")
+        self.num_paginas_alemao = self.base_repository.count_by_column("lingua", "de")
         self.pagina_atual_portugues = 0
         self.pagina_atual_alemao = 0
 
@@ -27,9 +27,11 @@ class PaginaRepository(BaseRepository):
         last_page = False
 
         if lingua == "portugues":
+            lingua = "ptbr"
             pagina = self.pagina_atual_portugues
             self.pagina_atual_portugues = (self.pagina_atual_portugues + 1) % self.num_paginas_portugues
         else:
+            lingua = "de"
             pagina = self.pagina_atual_alemao
             self.pagina_atual_alemao = (self.pagina_atual_alemao + 1) % self.num_paginas_alemao
     
@@ -40,7 +42,7 @@ class PaginaRepository(BaseRepository):
             paginas_lingua.append(pag.id)
         
         for pag in paginas_usuario:
-            paginas_feitas.append(paginas_usuario.pagina_id)
+            paginas_feitas.append(pag.pagina_id)
 
         possible_paginas = list(set(paginas_lingua) - set(paginas_feitas))
 

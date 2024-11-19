@@ -20,7 +20,7 @@ class TextoCorrecaoManualRepository(BaseRepository):
     
     def get_by_usuario_id(self, usuario_id):
         try:
-            return self.base_repository.get_by_column("usuario_id", usuario_id)
+            return self.base_repository.get_by_column_many("usuario_id", usuario_id)
         except NoResultFound:
             return []
     
@@ -35,15 +35,17 @@ class TextoCorrecaoManualRepository(BaseRepository):
         texto_ocr_repository = TextoOcrRepository()
 
         texto_usuario = texto_correcao_manual.texto_corrigido_manualmente
-        ocr_base = texto_ocr_repository.get_by_pagina_id(texto_correcao_manual.pagina_id).texto_ocr
+        ocr_base = texto_ocr_repository.get_by_pagina_id(texto_correcao_manual.pagina_id).texto_gabarito
 
         distancia_usuario = distance(ocr_base, texto_usuario)
 
-        print("a pontuacao é:", distancia_usuario)
+        pontuacao = 500 - distancia_usuario
+
+        print("a pontuacao é:", pontuacao)
 
         pontuacao_data = PontuacaoInDatabase(
             pagina_id=texto_correcao_manual.pagina_id,
-            pontuacao=distancia_usuario,
+            pontuacao=pontuacao,
             lingua_ocr="Alemão",
             usuario_id=texto_correcao_manual.usuario_id
         )
