@@ -17,6 +17,7 @@ class TextoCorrecaoManualInDatabase(BaseTextoCorrecaoManual):
     
     created_at: datetime.datetime = datetime.datetime.now()
     updated_at: datetime.datetime = datetime.datetime.now()
+    
 
 class TextoCorrecaoManualOut(BaseTextoCorrecaoManual):
     id: int

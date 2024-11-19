@@ -24,6 +24,7 @@ class PaginaRepository(BaseRepository):
     def get_pagina_unica(self, usuario_id, lingua):
         paginas_feitas = []
         paginas_lingua = []
+        last_page = False
 
         if lingua == "portugues":
             pagina = self.pagina_atual_portugues
@@ -43,7 +44,10 @@ class PaginaRepository(BaseRepository):
 
         possible_paginas = list(set(paginas_lingua) - set(paginas_feitas))
 
-        return self.base_repository.get_by_id_and_column(possible_paginas[pagina], "lingua", lingua)
+        if len(possible_paginas) == 1:
+            last_page = True
+
+        return self.base_repository.get_by_id_and_column(possible_paginas[pagina], "lingua", lingua), last_page
     
     def create(self, pagina):
         obj = Pagina(**pagina.dict())

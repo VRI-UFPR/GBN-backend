@@ -14,7 +14,23 @@ async def get_pagina() -> PaginaOut:
 
 @router.get("/pagina_unica/{usuario_id}/{lingua}", status_code=status.HTTP_200_OK)
 async def get_pagina_unica(usuario_id: int, lingua: str) -> PaginaOut:
-    return pagina_repository.get_pagina_unica(usuario_id, lingua)
+    data_out, last_page = pagina_repository.get_pagina_unica(usuario_id, lingua)
+
+    dataout = PaginaOut(
+        id=data_out.id,
+        exemplar_id=data_out.exemplar_id,
+        pagina_index=data_out.pagina_index,
+        image_path=data_out.image_path,
+        iiif_path=data_out.iiif_path,
+        fontes=data_out.fontes,
+        lingua=data_out.lingua,
+        last_page=last_page
+    )
+
+    return dataout
+
+    
+    
 
 @router.get("/{id}", response_model=Optional[PaginaOut], status_code=status.HTTP_200_OK)
 async def get_pagina(id: int) -> PaginaOut:

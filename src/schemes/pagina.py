@@ -29,6 +29,8 @@ class PaginaOut(BasePagina):
     iiif_path: Optional[str] | None = None
     fontes: str
 
+    last_page: bool = False
+
 class PaginaRequest(BaseModel):
     usuario_id: int
     lingua_pagina: str

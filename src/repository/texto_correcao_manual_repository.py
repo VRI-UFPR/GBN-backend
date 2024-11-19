@@ -45,6 +45,7 @@ class TextoCorrecaoManualRepository(BaseRepository):
             pagina_id=texto_correcao_manual.pagina_id,
             pontuacao=distancia_usuario,
             lingua_ocr="Alemão",
+            usuario_id=texto_correcao_manual.usuario_id
         )
 
         texto_correcao_manual_obj = TextoCorrecaoManual(**texto_correcao_manual.dict())
