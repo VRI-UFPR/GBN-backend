@@ -54,11 +54,11 @@ def populate_pagina():
     engine = get_engine()
     with Session(engine) as session:
         with open('data/pagina.csv', 'r') as file:
-            reader = csv.reader(file)
+            reader = csv.reader(file, delimiter=';')
             next(reader)  # Skip header row
             for row in reader:
                 # print(row)                
-                pagina = Pagina(id=row[0], pagina_index=row[1], image_path=row[2], exemplar_id=row[3])
+                pagina = Pagina(id=row[0], pagina_index=row[1], image_path=row[2], exemplar_id=row[3], lingua=row[4])
 
                 session.add(pagina)
                 session.commit()
@@ -67,7 +67,7 @@ def populate_perguntas():
     engine = get_engine()
     with Session(engine) as session:
         with open("data/pergunta.csv", 'r') as file:
-            reader = csv.reader(file)
+            reader = csv.reader(file, delimiter=';')
             next(reader)  # Skip header row
             for row in reader:
                 print(row)                
@@ -97,7 +97,7 @@ def populate_texto_ocr():
             next(reader)  # Skip header row
             for row in reader:
                 # print(row)                
-                pagina = TextoOcr(id=row[0], pagina_id=row[1], texto_ocr=row[2], modelo_ocr=row[3])
+                pagina = TextoOcr(id=row[0], pagina_id=row[1], texto_ocr=row[2], texto_gabarito=row[3])
 
                 session.add(pagina)
                 session.commit()

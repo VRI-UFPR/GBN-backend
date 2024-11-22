@@ -27,6 +27,17 @@ class BaseRepository:
             data = results.one()
 
             return data
+
+    def get_by_email(self, email):
+        with Session(self.engine) as session:
+            statement = select(self.model).where(self.model.email == email)
+            try:
+                results = session.exec(statement)
+                data = results.one()
+            except:
+                return None
+            
+            return data
         
     def get_by_id_and_column(self, id, column, value):
         with Session(self.engine) as session:
@@ -43,6 +54,14 @@ class BaseRepository:
             data = results.one()
 
             return data
+        
+    def get_by_column_many(self, column, value):
+        with Session(self.engine) as session:
+            statement = select(self.model).where(getattr(self.model, column) == value)
+            results = session.exec(statement)
+            data = results.all()
+
+            return data
     
     def update(self, data):
         with Session(self.engine) as session:
@@ -57,6 +76,14 @@ class BaseRepository:
     def count(self):
         with Session(self.engine) as session:
             statement = select(self.model)
+            results = session.exec(statement)
+            data = results.all()
+
+            return len(data)
+    
+    def count_by_column(self, column, value):
+        with Session(self.engine) as session:
+            statement = select(self.model).where(getattr(self.model, column) == value)
             results = session.exec(statement)
             data = results.all()
 

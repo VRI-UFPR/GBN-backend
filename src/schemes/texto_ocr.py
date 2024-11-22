@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 class BaseTextoOcr(BaseModel):
     texto_ocr: str # texto extraido do OCR
+    texto_gabarito: str # texto correto
     modelo_ocr: str # modelo de OCR utilizado
 
 class TextoCreate(BaseTextoOcr):

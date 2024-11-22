@@ -1,7 +1,57 @@
-id, pagina_id, pergunta
-0, 0, Assinale a opção correta:
-1, 1, Assinale a opção correta sobre “Os defensores da lavoura”:
-2, 2, Was ist richtig?:
-3, 3, Was ist richtig?:
-4, 4, Assinale a opção correta:
-5, 5, Assinale a opção correta:
+id;pagina_id;pergunta
+0;0;Assinale a opção correta:
+1;1;Assinale a opção correta:
+2;2;Assinale a opção correta:
+3;3;Assinale a opção correta:
+4;4;Com base no texto, assinale a alternativa correta:
+5;5;Com base no texto, assinale a alternativa correta:
+6;6;Com base no texto, assinale a alternativa correta:
+7;7;Com base no texto, assinale a alternativa correta:
+8;8;Com base no texto, assinale a alternativa correta:
+9;9;De acordo com o texto, qual é considerada uma obrigação importante para o progresso do Brasil após a abolição da escravidão?
+10;10;Com base no texto, assinale a alternativa correta:
+11;11;Segundo o texto, qual seria a medida mais eficaz para acabar com o comércio de escravos?
+12;12;Qual é a principal crítica feita pelo texto em relação à posição do Brasil sobre a questão da emancipação?
+13;13;Segundo o autor, o que deve ser feito antes de realizar a abolição completa da escravidão?
+14;14;Com base no texto, marque a alternativa correta:
+15;15;Com base no texto, marque a alternativa correta:
+16;16;Com base no texto, marque a alternativa correta:
+17;17;Com base no texto, marque a alternativa correta:
+18;18;Com base no texto, marque a alternativa correta:
+19;19;Com base no texto, marque a alternativa correta:
+20;20;A comédia “O Liberato” de Arthur Azevedo:
+21;21;Com base no texto, marque a alternativa correta:
+22;22;Marque a afirmação que está de acordo com o texto.
+23;23;Assinale a opção que está de acordo com o texto.
+24;24;Com base no texto, marque a afirmativa correta:
+25;25;Com base no texto, marque a alternativa correta:
+26;26;Com base no texto, marque a alternativa correta:
+27;27;Com base no texto, marque a alternativa correta:
+28;28;Com base no texto, marque a alternativa correta:
+29;29;
+30;30;Com base no texto, marque a alternativa correta:
+31;31;Com base no texto, marque a alternativa correta:
+32;32;Wem möchte Saraiva das Land geben?
+33;33;Wählen Sie anhand des Textes die richtige Alternative aus:
+34;34;Assinale a afirmativa que está de acordo com o texto:
+35;35;Wie viele Sklaven wurden in Campinas freigegeben?
+36;36;Wählen Sie anhand des Textes die richtige Alternative aus:
+37;37;Com base no texto, assinale a afirmativa correta:
+38;38;Assinale a opção correta:
+39;39;Assinale a opção correta sobre “Os defensores da lavoura”:
+40;40;Com base no texto, assinale a alternativa correta:
+41;41;Assinale a afirmativa que está de acordo com o texto.
+42;42;Com base no texto, assinale a afirmativa correta:
+43;43;Com base no texto, assinale a alternativa correta:
+44;44;Was ist richtig?
+45;45;Was ist richtig?
+46;46;Was hat Dr. Antonio Prado angekündigt?
+47;47;Was wurde in Sorocaba erklärt?
+48;48;Wie viele Sklaven im Alter von 60 bis 65 Jahren, die als Freie gelten, wurden in Rio de Janeiro registriert?
+49;49;Wohin reiste Dr. Joaquim Nabuco nach seinem Besuch in Nazareth?
+50;50;Warum ist Sklaverei laut dem Bischof falsch?
+51;51;Was sagt der Artikel über Deutsche?
+52;52;De acordo com o texto, assinale a opção correta:
+53;53;Assinale a opção correta:
+54;54;Assinale a opção correta:
+55;55;
