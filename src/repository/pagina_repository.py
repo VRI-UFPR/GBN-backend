@@ -1,4 +1,5 @@
 import logging
+import random
 
 from src.repository.base_repository import BaseRepository
 from src.repository.texto_correcao_manual_repository import TextoCorrecaoManualRepository
@@ -28,12 +29,12 @@ class PaginaRepository(BaseRepository):
 
         if lingua == "portugues":
             lingua = "ptbr"
-            pagina = self.pagina_atual_portugues
-            self.pagina_atual_portugues = (self.pagina_atual_portugues + 1) % self.num_paginas_portugues
+            # pagina = self.pagina_atual_portugues
+            # self.pagina_atual_portugues = (self.pagina_atual_portugues + 1) % self.num_paginas_portugues
         else:
             lingua = "de"
-            pagina = self.pagina_atual_alemao
-            self.pagina_atual_alemao = (self.pagina_atual_alemao + 1) % self.num_paginas_alemao
+            # pagina = self.pagina_atual_alemao
+            # self.pagina_atual_alemao = (self.pagina_atual_alemao + 1) % self.num_paginas_alemao
     
         paginas_usuario = self.correcao_repository.get_by_usuario_id(usuario_id)
         paginas = self.base_repository.get_by_column_many("lingua", lingua)
@@ -49,7 +50,9 @@ class PaginaRepository(BaseRepository):
         if len(possible_paginas) == 1:
             last_page = True
 
-        return self.base_repository.get_by_id_and_column(possible_paginas[pagina], "lingua", lingua), last_page
+        random_pagina = random.choice(possible_paginas)
+
+        return self.base_repository.get_by_id_and_column(random_pagina, "lingua", lingua), last_page
     
     def create(self, pagina):
         obj = Pagina(**pagina.dict())
