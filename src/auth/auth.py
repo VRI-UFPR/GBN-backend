@@ -58,17 +58,6 @@ async def login(
     access_token = create_access_token(data={"email": form_data.email}, expires_delta=access_token_expires)
     return Token(access_token=access_token, token_type="bearer")
 
-@router.post("/auth/refresh-token")
-async def refresh_token(
-    form_data: Annotated[TokenData, Depends()], 
-    ) -> Token:
-    
-    new_acess_token_expires = timedelta(minutes=ACESS_TOKEN_EXPIRE_MINUTES)
-    new_access_token = create_access_token(data={"email": form_data.email}, expires_delta=access_token_expires)
-
-    return Token(access_token: new_access_token, token_type: "bearer")
-
-
 # Rota para pegar o usuário atual (logado)
 @router.get("/usuario", response_model=Usuario)
 async def get_current_user(token: str = Depends(oauth2_scheme)):
@@ -77,13 +66,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         detail = "Credenciais inválidas",
         headers = {"WWW-Authenticate": "Bearer"}
     )
-
-    expired_exception = HTTPException(
-        status_code = 440,
-        detail = "Token expirou",
-        headers = {"WWW-Authenticate": "Bearer"}
-    )
-
     try:
         payload = jwt.decode(token, PRIVATE_KEY, algorithms=["HS256"])
         email = payload.get("email")
@@ -91,9 +73,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
             raise credentials_exception
         token_data = TokenData(email=email)
 
-    except jwt.ExpiredSignatureError:
-        raise expired_exception
-    
     except jwt.PyJWTError:
         raise credentials_exception
 
@@ -101,6 +80,4 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
     user = usuario_repository.get_by_email(email=token_data.email)
     if user is None:
         raise credentials_exception
-    
     return user
-
