@@ -8,6 +8,7 @@ class BasePagina(BaseModel):
     image_path: Optional[str] | None = None # caminho da pagina do jornal no servidor
     iiif_path: Optional[str] | None = None # caminho da pagina do jornal no servidor
     fontes: str # fontes da pagina do jornal
+    lingua: str # lingua da pagina do jornal
 
 class PaginaCreate(BasePagina):
     pass
@@ -22,8 +23,15 @@ class PaginaOut(BasePagina):
     id: int
     exemplar_id: int
     
+
     pagina_index: int
     image_path: Optional[str] | None = None
     iiif_path: Optional[str] | None = None
     fontes: str
+
+    last_page: bool = False
+
+class PaginaRequest(BaseModel):
+    usuario_id: int
+    lingua_pagina: str
     

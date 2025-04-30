@@ -11,7 +11,7 @@ class TextoCorrecaoManual(SQLModel, table=True):
     
     pagina_id: int = Field(default=None, foreign_key="pagina.id")
     texto_ocr_id: int = Field(default=None, foreign_key="textoocr.id")
-    # usuario_id: int = Field(default=None, foreign_key="usuario.id")
+    usuario_id: int = Field(default=None, foreign_key="usuario.id")
     pergunta_id: int = Field(default=None, foreign_key="pergunta.id")
     
     created_at: datetime.datetime = Field(default_factory=datetime.datetime.utcnow)

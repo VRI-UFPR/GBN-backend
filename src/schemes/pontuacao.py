@@ -10,7 +10,7 @@ class PontuacaoCreate(BasePontuacao):
 
 class PontuacaoInDatabase(BasePontuacao):
     # id: int
-    # usuario_id: int
+    usuario_id: int
     pagina_id: int
 
     created_at: datetime.datetime = datetime.datetime.now()
@@ -18,5 +18,7 @@ class PontuacaoInDatabase(BasePontuacao):
 
 class PontuacaoOut(BasePontuacao):
     id: int
-    # usuario_id: int
+    usuario_id: int
+    pagina_id: int
+    pontuacao: int
     
